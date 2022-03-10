@@ -1,10 +1,9 @@
-class StuffController < ApplicationController
+class StuffsController < ApplicationController
 
   before_action :set_stuff, only: %i[show edit update destroy]
 
   def new
     @stuff = Stuff.new
-    authorize @stuff
   end
 
   def create
@@ -20,11 +19,9 @@ class StuffController < ApplicationController
 
   def show
     @like = Like.new
-    authorize @stuff
   end
 
   def edit
-    authorize @stuff
   end
 
   def update
@@ -33,14 +30,13 @@ class StuffController < ApplicationController
     else
       render :edit
     end
-    authorize @stuff
   end
 
   def destroy
     stuff = Stuff.find(params[:id])
     stuff.destroy
 
-    # redirect_to user_path(stuff.user), notice: 'Stuff gone!'
+    redirect_to edit_user_registration_path, notice: 'Stuff gone!'
   end
 
   private
