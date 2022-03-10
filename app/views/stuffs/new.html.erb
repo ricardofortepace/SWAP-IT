@@ -1,0 +1,26 @@
+<H1>CREATE STUFF</H1>
+
+<%= simple_form_for(@stuff) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "name" }%>
+    <%= f.input :description,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "description" }%>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Save New Stuff" %>
+  </div>
+<% end %>
+
+<%= link_to 'Go Home', root_path%>
+<br>
+<%= link_to 'Edit User', edit_user_registration_path%>
+<br>
+<%= link_to "Back", :back %>
