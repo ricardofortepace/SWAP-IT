@@ -75,7 +75,7 @@
 
 .avatar {
   width: 80px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  //box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   border: 7px solid $azul-claro;
   border-radius: 40px;
   margin-top: 60px;
@@ -106,7 +106,8 @@
 
 .dropdown-menu {
   background-color: $verde-agua;
-  opacity: 0.75;
+  opacity: 0.95;
+
 }
 
 .dropdown-item {
