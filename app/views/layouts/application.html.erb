@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SWAPIt</title>
+
+    <title>Swap it 🌿</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Saving the World. Swipe by Swipe.">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,7 +23,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
@@ -17,5 +30,6 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+    <script src="https://kit.fontawesome.com/812ec74016.js" crossorigin="anonymous"></script>
   </body>
 </html>
