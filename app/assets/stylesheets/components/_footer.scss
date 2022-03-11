@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
-
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #5463ff;
-  color: white;
+  background: $azul-claro;
+  color: $branco;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 30px;
   padding: 0px 25px;
-  font-family: "Sen", sans-serif;
   z-index: 20;
   font-size: 14px;
 }
@@ -22,7 +19,7 @@
   font-size: 14px;
 }
 .footer-links a {
-  color: white;
+  color: $branco;
   //opacity: 0.9;
   text-decoration: none;
   padding: 0px 10px;
