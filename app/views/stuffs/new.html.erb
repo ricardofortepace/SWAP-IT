@@ -3,7 +3,7 @@
 <%= simple_form_for(@stuff) do |f| %>
 
   <div class="form-inputs">
-    <%#= f.input :photos, as: :file, input_html: { multiple: true }%>%
+    <%= f.input :photos, as: :file, input_html: { multiple: true }%>
     <%= f.input :name,
                 required: true,
                 autofocus: true,

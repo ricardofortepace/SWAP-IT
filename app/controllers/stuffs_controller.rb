@@ -46,6 +46,6 @@ class StuffsController < ApplicationController
   end
 
   def stuff_params
-    params.require(:stuff).permit(:name, :description, photos:[])
+    params.require(:stuff).permit(:name, :description, photos: [])
   end
 end
