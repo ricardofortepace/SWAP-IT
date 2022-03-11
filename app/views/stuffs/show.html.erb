@@ -19,3 +19,5 @@
 <%= link_to "Create New Stuff", new_stuff_path %>
 <br>
 <%= link_to "Back", :back %>
+<br>
+<%= link_to 'Delete this Stuff', stuff_path(@stuff), method: 'DELETE', data: { confirm: "are you sure?" } %>

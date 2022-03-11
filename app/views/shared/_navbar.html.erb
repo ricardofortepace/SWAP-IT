@@ -24,6 +24,9 @@
               <%= link_to "Edit User", edit_user_registration_path, class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to "Create a stuff", new_stuff_path, class: "dropdown-item" %>
+              <%= link_to "Acess my stuffs", stuffs_path, class: "dropdown-item"%>
+
             </div>
           </li>
         <% else %>

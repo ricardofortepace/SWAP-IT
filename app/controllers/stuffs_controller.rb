@@ -22,6 +22,7 @@ class StuffsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
@@ -37,6 +38,10 @@ class StuffsController < ApplicationController
     stuff.destroy
 
     redirect_to edit_user_registration_path, notice: 'Stuff gone!'
+  end
+
+  def index
+    @stuffs = current_user.stuffs.all
   end
 
   private
