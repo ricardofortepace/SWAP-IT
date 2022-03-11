@@ -6,7 +6,6 @@
   // background-color: #111;
   height: 87.5vh;
   position: relative;
-  z-index: -10;
 }
 
 .back-marrom {
@@ -65,5 +64,17 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: 10;
+}
+
+.clock:hover {
+  transition: 0.7s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  transform: rotate(720deg);
 }
