@@ -1,5 +1,8 @@
 <h1>SHOW STUFF</h1>
 
+<h1><%=@stuff.name%></h1>
+<h2><%=@stuff.description%></h2>
+<%#= cl_image_tag @stuff.photo.key, height: 300, width: 400, crop: :fill%>
 
 <%= link_to 'Edit this Stuff', edit_stuff_path%>
 <br>
