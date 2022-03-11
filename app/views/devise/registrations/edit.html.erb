@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="form-swapit">
-    <h2>Edit<%= resource_name.to_s.humanize %></h2>
+    <h2>edit <%= resource_name.to_s.humanize %></h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
@@ -17,33 +17,33 @@
         <%#= f.input :email, required: true, autofocus: true %>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+          <p>currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
 
         <%= f.input :password,
                     hint: "leave it blank if you don't want to change it",
                     required: false,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new password" } %>
         <%= f.input :password_confirmation,
                     required: false,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new password" } %>
         <%= f.input :current_password,
                     hint: "we need your current password to confirm your changes",
                     required: true,
-                    input_html: { autocomplete: "current-password" } %>
+                    input_html: { autocomplete: "current password" } %>
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Update", class: "button-04"%>
+        <%= f.button :submit, "update", class: "button-04"%>
       </div>
     <% end %>
 
-    <h3>Cancel my account</h3>
+    <h3>cancel my account</h3>
 
-    <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p>unhappy? <%= link_to "cancel my account", registration_path(resource_name), data: { confirm: "are you sure?" }, method: :delete %></p>
 
-    <%= link_to "Back", :back %>
+    <%= link_to "back", :back %>
     <br>
-    <%= link_to "Add New Stuff", new_stuff_path %>
+    <%= link_to "add new stuff", new_stuff_path %>
   </div>
 </div>

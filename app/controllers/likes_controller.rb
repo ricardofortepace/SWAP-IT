@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-
   def new
     @swap_stuff = Stuff.where.not(user: current_user).sample
     @my_stuffs = current_user.stuffs
