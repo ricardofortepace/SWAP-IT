@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height:6px;
+  background: #5463FF;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0px 50px;
+  font-family: "Sen", sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  font-size: 25x;
+}
+.footer-links a {
+  color: white;
+  //opacity: 0.9;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 0.4;
+}
+
+.footer-copyright {
+  margin: auto;
+}
