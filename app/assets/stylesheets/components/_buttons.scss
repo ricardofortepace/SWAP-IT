@@ -1,0 +1,11 @@
+.button-04 {
+  background: none;
+  color: $azul-claro;
+  border-width: 2px;
+  border-color: $azul-claro $verde-agua $verde-agua $azul-claro;
+  border-radius: 20;
+  &:hover {
+    color: $branco;
+    background-color: $azul-claro;
+  }
+}

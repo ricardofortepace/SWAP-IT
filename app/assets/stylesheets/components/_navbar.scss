@@ -1,12 +1,125 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+#erva_daninha {
+  width: 10px;
+  // vertical-align: baseline;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: $azul-claro;
+  height: 65px;
+}
+
+#hello {
+  margin-top: 30px;
+}
+
+.hello-user {
+  margin-right: 35px;
+  margin-top: 15px;
+}
+
+.email-user {
+  margin-top: -20px;
+
+  margin-right: 35px;
+  margin-bottom: 20px;
+}
+
+#hello-user {
+  text-align: left;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  color: $branco;
+  font-family: "Sen", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#email-user {
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  color: $branco;
+  font-family: "Sen", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-light .navbar-brand {
+  color: $branco;
+  text-decoration: none;
+  font-size: 5vh;
+  align-items: flex-end;
+  font-family: "Sen", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5rem;
+  margin-left: 20px;
+}
+
+.navbar-light:hover .navbar-brand:hover {
+  color: $branco;
+  text-decoration: none;
+  align-items: flex-end;
+  font-family: "Sen", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5rem;
+  margin-left: 20px;
+}
+
+.avatar {
+  width: 80px;
+  // box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 7px solid #5463ff;
+
+  border-radius: 40px;
+  margin-top: 60px;
+  margin-right: 20px;
+  z-index: 10;
+}
+
+.avatar:hover {
+  border: 7px solid $verde-agua;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin: auto 2vw auto 2vw;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: $branco;
+  font-family: "Sen", sans-serif;
+  font-size: 16px;
+}
+
+.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+  margin: auto 2vw auto 2vw;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: $branco;
+  font-family: "Sen", sans-serif;
+}
+
+.dropdown-menu {
+  background-color: $verde-agua;
+  opacity: 0.95;
+
+}
+
+.dropdown-item {
+  color: $branco;
+  font-family: "Sen", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+}
+
+.dropdown-item:hover {
+  background-color: $marronzinho;
+  // opacity: 0.75;
+  color: $branco;
 }

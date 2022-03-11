@@ -1,0 +1,32 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: $azul-claro;
+  color: $branco;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0px 25px;
+  z-index: 20;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.footer-links a {
+  color: $branco;
+  //opacity: 0.9;
+  text-decoration: none;
+  padding: 0px 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer-copyright {
+  margin: auto;
+}
