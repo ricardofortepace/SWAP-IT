@@ -1,0 +1,30 @@
+.stuff_name {
+}
+
+.stuff_description {
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+}
+
+.container-carousel {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-fotos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.images-carousel {
+  scale: 1;
+  &:hover {
+    scale: 1.5;
+  }
+}
