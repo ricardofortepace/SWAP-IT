@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <%= simple_form_for @like do |f| %>
+        <%= f.input :stuff, as: :radio_buttons, collection: @my_stuffs %>
+        <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
+        <%= f.input :status, as: :radio_buttons, collection: [['like', true], ['dislike', false]]  %>
+        <%= f.button :submit, 'proximo', class: 'btn btn-success'%>
+      <% end %>
+    </div>
+    <div class="col-6">
+      <%= cl_image_tag (@swap_stuff.photos.first.key) %>
+
+    </div>
+    <div class="col-3">
+      <p>My stuff info </p>
+      <%= @swap_stuff.description %>
+    </div>
+  </div>
+</div>
