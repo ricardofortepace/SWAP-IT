@@ -1,23 +1,32 @@
-<div class="d-flex justify-content-center align-items-center">
-  <div class="form-swapit">
-    <h1>show stuff</h1>
+<p class="stuff_name"><%=@stuff.name %></p>
+<p class="stuff_description"><%=@stuff.description %></p>
+
 
     <h1><%=@stuff.name%></h1>
     <h2><%=@stuff.description%></h2>
 
+<div class="container-fotos">
+  <% @stuff.photos.each_with_index do |photo, index| %>
+    <a data-bs-toggle="modal" data-bs-target="#photo-<%=index%>"><%= cl_image_tag photo.key, height: 200, width: 200, crop: :fill, inner_html: { class:"images-carousel" } %></a>
+        <!-- Modal -->
+    <div class="modal fade" id="photo-<%=index%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <%= cl_image_tag photo.key, height: 400, width: 400, crop: :fill, inner_html: { class:"images-carousel" } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-    <% @stuff.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
+<div class="botoes">
+  <%= link_to 'Edit this Stuff', edit_stuff_path%>
+  <%= link_to 'Go Home', root_path%>
+  <%= link_to "Back", :back %>
 
-    <%= link_to 'edit this stuff', edit_stuff_path%>
-    <br>
-    <%= link_to 'home', root_path%>
-    <br>
-    <%= link_to 'edit user', edit_user_registration_path%>
-    <br>
-    <%= link_to "create new stuff", new_stuff_path %>
-    <br>
-    <%= link_to "back", :back %>
-  </div>
 </div>
