@@ -1,27 +1,31 @@
-<H1>CREATE STUFF</H1>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="form-swapit">
+    <H1>create stuff</H1>
 
-<%= simple_form_for(@stuff) do |f| %>
+    <%= simple_form_for(@stuff) do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-    <%= f.input :name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "name" }%>
-    <%= f.input :description,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "description" }%>
+      <div class="form-inputs">
+        <%= f.input :photos, as: :file, input_html: { multiple: true }%>
+        <%= f.input :name,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "name" }%>
+        <%= f.input :description,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "description" }%>
 
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "save new stuff" %>
+      </div>
+    <% end %>
+
+    <%= link_to 'go home', root_path%>
+    <br>
+    <%= link_to 'edit user', edit_user_registration_path%>
+    <br>
+    <%= link_to "back", :back %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Save New Stuff" %>
-  </div>
-<% end %>
-
-<%= link_to 'Go Home', root_path%>
-<br>
-<%= link_to 'Edit User', edit_user_registration_path%>
-<br>
-<%= link_to "Back", :back %>
+</div>
