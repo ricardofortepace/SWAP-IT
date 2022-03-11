@@ -4,7 +4,15 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :photo, :label => "photo (optional)", as: :file %>
+    <%= f.input :name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "name" }%>
+    <%#= f.input :address,
+                    input_html: { data: { geocoder_target: "address" }, class: "d-none" },
+                    wrapper_html: { data: { controller: "geocoder"} } %>
+    <%#= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
