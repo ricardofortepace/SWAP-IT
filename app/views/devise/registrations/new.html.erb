@@ -1,29 +1,40 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="form-swapit">
-    <h2>sign up</h2>
+    <h2 style="text-align: center">sign up</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <%= f.input :photo, as: :file %>
+
         <%= f.input :email,
+                      placeholder: 'alan@turing.com',
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
-        <%= f.input :photo, as: :file %>
+
         <%= f.input :name,
+                      placeholder: 'Alan Turing',
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "name" }%>
 
         <%= f.input :password,
                     required: true,
-                    placeholder: 'minimum of 6 characters',
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    placeholder: 'min of 6 characters',
+                    #hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                     input_html: { autocomplete: "new-password" } %>
+
         <%= f.input :password_confirmation,
                     required: true,
+                    placeholder: 'same password above',
                     input_html: { autocomplete: "new-password" } %>
+
+        <p>now, please register your first item &#128516;</p>
+        <p style="color:red">STILL MISSING THE FIELDS "DESCRIPTION", "DETAILS", "UPLOAD IMAGES"</p>
+
+
 
       </div>
 
@@ -32,6 +43,6 @@
       </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+    <%#= render "devise/shared/links" %>
   </div>
 </div>

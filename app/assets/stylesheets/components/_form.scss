@@ -11,5 +11,28 @@ legend ~ div.form-check:first-of-type {
 
 .form-swapit {
   width: 33%;
+  color: $azul-claro;
+}
 
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="file"],
+input {
+  text-align: center;
+  border-color: $azul-claro;
+  color: $azul-claro;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="file"]:focus,
+input:focus {
+  border-color: $azul-royal;
+  color: $azul-royal;
 }
