@@ -11,11 +11,10 @@
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "name" }%>
-        <%#= f.input :address,
-                        input_html: { data: { geocoder_target: "address" }, class: "d-none" },
-                        wrapper_html: { data: { controller: "geocoder"} } %>
-        <%#= f.input :email, required: true, autofocus: true %>
-
+        <%= f.input :address,
+              input_html: { data: { geocoder_target: "address" } },
+              wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
+        
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <p>currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
