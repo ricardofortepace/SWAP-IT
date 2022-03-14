@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   resources :stuffs
   resources :likes, only: %i[ new create ]
-  
-  resources :chatrooms, only: :show do
+
+  resources :chatrooms, only: [:show, :create] do
     resources :messages, only: :create
   end
 end
