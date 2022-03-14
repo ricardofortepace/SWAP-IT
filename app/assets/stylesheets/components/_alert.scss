@@ -1,26 +1,31 @@
 alert {
   color: red;
-  bottom: 16px;
+  bottom: 80px;
+  right: -1200px;
   right: 16px;
   font-family: "Sen", sans-serif;
-  margin-bottom: 30px;
   width: 20%;
+  z-index: 100;
 }
 
 .alert-info {
   color: #111;
+  bottom: 80px;
+  right: -1200px;
   background-color: #12e2a3;
   opacity: 0.5;
   font-family: "Sen", sans-serif;
-  margin-bottom: 30px;
   width: 20%;
+  z-index: 100;
 }
 
 .alert-warning {
   color: #fff;
+  bottom: 80px;
+  right: -1200px;
   background-color: #ff0000;
   opacity: 0.5;
   font-family: "Sen", sans-serif;
-  margin-bottom: 30px;
   width: 20%;
+  z-index: 100;
 }
