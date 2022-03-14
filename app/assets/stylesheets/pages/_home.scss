@@ -17,19 +17,6 @@
   opacity: 0.55;
 }
 
-.slogan {
-  letter-spacing: 0.3rem;
-  color: #fff;
-  font-family: "Sen", sans-serif;
-  font-size: 72px;
-  font-weight: 700;
-  margin: 0 auto;
-  padding-bottom: 300px;
-  z-index: 10;
-  text-align: center;
-  vertical-align: bottom;
-}
-
 .back-folha {
   position: absolute;
   background-image: url(folha-fundo.jpg);
@@ -55,12 +42,12 @@
   width: 95%;
   justify-content: space-around;
   position: absolute;
-  bottom: 47px;
+  bottom: 60px;
 }
 
 .clock {
-  height: 175px;
-  width: 175px;
+  height: 160px;
+  width: 160px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -77,4 +64,65 @@
   -o-transform: rotate(720deg);
   -ms-transform: rotate(720deg);
   transform: rotate(720deg);
+}
+
+.slogan {
+  letter-spacing: 0.3rem;
+  color: #fff;
+  font-family: "Sen", sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  margin: 0 auto;
+  padding-bottom: 300px;
+  z-index: 10;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+////////
+
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+
+#parent {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+#border {
+  border-bottom: solid 3px rgba(84, 99, 255, 1);
+  position: absolute;
+  right: -7px;
+  width: 40px;
+}
+
+/* Animation */
+#parent {
+  animation: animated-text 4s steps(30, end) 1s 1 normal both;
+}
+
+#border {
+  animation: animated-cursor 1500ms steps(30, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1200px;
+  }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+  from {
+    border-bottom-color: rgba(84, 99, 255, 1);
+  }
+  to {
+    border-bottom-color: transparent;
+  }
 }
