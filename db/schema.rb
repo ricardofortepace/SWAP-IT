@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_12_155757) do
+ActiveRecord::Schema.define(version: 2022_03_13_135834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,12 @@ ActiveRecord::Schema.define(version: 2022_03_12_155757) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "likes", force: :cascade do |t|
     t.bigint "stuff_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -51,6 +57,16 @@ ActiveRecord::Schema.define(version: 2022_03_12_155757) do
     t.boolean "status", default: false
     t.index ["stuff_id"], name: "index_likes_on_stuff_id"
     t.index ["trading_stuff_id"], name: "index_likes_on_trading_stuff_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "stuffs", force: :cascade do |t|
@@ -82,5 +98,7 @@ ActiveRecord::Schema.define(version: 2022_03_12_155757) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "likes", "stuffs"
   add_foreign_key "likes", "stuffs", column: "trading_stuff_id"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "stuffs", "users"
 end
