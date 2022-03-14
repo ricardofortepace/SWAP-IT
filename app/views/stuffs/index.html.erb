@@ -1,17 +1,11 @@
-<h1 class="title">all my stuff</h1>
-
 <div class="container">
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <% @stuffs.each do |stuff| %>
       <%= link_to stuff do %>
         <div class="col">
-          <div class="card h-100">
-            <div style="text-align: center;">
-              <%= cl_image_tag(stuff.photos.first.key, height: 250, width: 250, crop: :fill)%>
-              <div class="card-body">
-                <h5 class="card-title"><%=stuff.name%></h5>
-              </div>
-            </div>
+          <div class="cards">
+            <%= cl_image_tag(stuff.photos.first.key, height: 250, width: 250, crop: :fill)%>
+            <h5 class="card-text"><%=stuff.name%></h5>
           </div>
         </div>
       <%end%>
