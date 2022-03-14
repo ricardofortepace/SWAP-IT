@@ -59,12 +59,12 @@ input:focus {
   max-height: 87vh;
 }
 
-.container-formularios-simples-2 {
+.container-formularios-simples-3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 87vh;
-  max-height: 87vh;
+  height: 45vh;
+  margin-top: 15vh;
 }
 
 .container-formularios-duplo {
@@ -83,7 +83,6 @@ input:focus {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
 .mapboxgl-ctrl-geocoder--input {
@@ -122,3 +121,7 @@ input:focus {
   height: 37px;
 }
 
+.container-botao {
+  width: 65vw;
+  margin: 0 auto;
+}
