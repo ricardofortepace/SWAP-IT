@@ -6,9 +6,12 @@ class StuffsController < ApplicationController
     @stuff = Stuff.new
   end
 
+
+
   def create
     @stuff = Stuff.new(stuff_params)
     @stuff.user = current_user
+    @stuff.address = current_user.address
 
     if @stuff.save
       redirect_to stuff_path(@stuff), notice: 'Stuff added!'
@@ -51,6 +54,6 @@ class StuffsController < ApplicationController
   end
 
   def stuff_params
-    params.require(:stuff).permit(:name, :description, photos: [])
+    params.require(:stuff).permit(:name, :description, :address, photos: [])
   end
 end

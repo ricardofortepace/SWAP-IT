@@ -19,7 +19,7 @@
           <%= f.input :range,:label => "range (km)", collection: 0..269,
                       required: true,
                       autofocus: true %>
-          <%= f.input :address, :label => "address (optional)",
+          <%= f.input :address, :label => "address",
                       input_html: { data: { geocoder_target: "address" }, class: "d-none", id: "search-item" },
                       wrapper_html: { data: { controller: "geocoder",
                       geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
