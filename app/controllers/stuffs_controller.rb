@@ -11,7 +11,7 @@ class StuffsController < ApplicationController
     @stuff.user = current_user
 
     if @stuff.save
-      redirect_to stuff_path(@stuff), notice: 'Stuff created.'
+      redirect_to stuff_path(@stuff), notice: 'Stuff added!'
     else
       render :new
     end

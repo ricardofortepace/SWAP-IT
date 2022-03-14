@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-center align-items-center">
+<div class="container-formularios-simples">
   <div class="form-swapit">
-    <h1>add stuff</h1>
+    <h1 class="title">add stuff</h1>
 
     <%= simple_form_for(@stuff) do |f| %>
 
@@ -22,14 +22,8 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "save my new stuff", class: "button-04"%>
+        <%= f.button :submit, "save new stuff", class: "button-04"%>
       </div>
     <% end %>
-
-    <%= link_to 'go home', root_path%>
-    <br>
-    <%= link_to 'edit user', edit_user_registration_path%>
-    <br>
-    <%= link_to "back", :back %>
   </div>
 </div>

@@ -1,21 +1,20 @@
-<h1>all my stuff</h1>
+<h1 class="title">all my stuff</h1>
 
-
-<%#= @stuffs.each do |stuff| %>
-  <%#= stuff.name  %>
-  <%#= stuff.description%>
-<%# end %>
-
-<div class="container-stuffs">
-  <div class="row">
-    <div class="cards my-4">
-      <% @stuffs.each do |stuff| %>
-        <%= link_to stuff do %>
-        <div class="" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%#= cl_image_path(stuff.photos.first.key)%>)">
-          <p class= "detail">name: <span class=""><%=stuff.name%></p></span>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <% @stuffs.each do |stuff| %>
+      <%= link_to stuff do %>
+        <div class="col">
+          <div class="card h-100">
+            <div style="text-align: center;">
+              <%= cl_image_tag(stuff.photos.first.key, height: 250, width: 250, crop: :fill )%>
+              <div class="card-body">
+                <h5 class="card-title"><%=stuff.name%></h5>
+              </div>
+            </div>
+          </div>
         </div>
-        <% end %>
-      <% end %>
-    </div>
+      <%end%>
+    <% end %>
   </div>
 </div>
