@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :address, :photo])
   end
 
+  def after_sign_in_path_for(resource)
+    if current_user.stuffs.count > 0
+      new_like_path
+    else
+      new_stuff_path
+    end
+  end
+
 end
