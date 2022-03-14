@@ -14,13 +14,14 @@ class LikesController < ApplicationController
     like.stuff = Stuff.find(params[:like][:stuff])
     like.trading_stuff = Stuff.find(params[:like][:trading_stuff])
     like.save!
-    redirect_to new_like_path
+    @chat = Chatroom.new(name: like.stuff.name)
+    @chat.save
+    redirect_to chatroom_path(@chat)
   end
-
 
   private
 
   def like_params
-    params.require(:like).permit( :status )
+    params.require(:like).permit(:status)
   end
 end
