@@ -21,8 +21,6 @@
 </div>
 
 <div class="botoes">
-  <%= link_to 'Edit this Stuff', edit_stuff_path%>
-  <%= link_to 'Go Home', root_path%>
-  <%= link_to "Back", :back %>
-  <%= link_to 'Delete this Stuff', stuff_path(@stuff), method: 'DELETE', data: { confirm: "are you sure?" } %>
+  <%= link_to 'Edit', edit_stuff_path%>
+  <%= link_to 'Delete', stuff_path(@stuff), method: 'DELETE', data: { confirm: "are you sure?" } %>
 </div>

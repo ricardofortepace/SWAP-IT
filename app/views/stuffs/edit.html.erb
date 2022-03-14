@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="form-swapit">
-    <h1>edit stuff</h1>
+    <h1 class="title">edit stuff</h1>
 
     <%= simple_form_for(@stuff) do |f| %>
 
@@ -19,16 +19,8 @@
 
       <div class="form-actions">
         <%= f.button :submit, "save changes" %>
+        <%= link_to 'delete', stuff_path(@stuff), method: 'DELETE', data: { confirm: "are you sure?"} %>
       </div>
     <% end %>
-
-
-    <%= link_to 'delete this stuff', stuff_path(@stuff), method: 'DELETE', data: { confirm: "are you sure?" } %>
-    <br>
-    <%= link_to 'home', root_path%>
-    <br>
-    <%= link_to 'edit user', edit_user_registration_path%>
-    <br>
-    <%= link_to "back", :back %>
   </div>
 </div>
