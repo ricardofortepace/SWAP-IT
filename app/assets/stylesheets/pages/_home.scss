@@ -126,7 +126,8 @@
 
 /* Animation */
 #parent {
-  animation: animated-text 4s steps(30, end) 1 normal both;
+  animation: animated-text 8s steps(30, end) 1 normal both;
+  animation-iteration-count: infinite;
 }
 
 #border {
