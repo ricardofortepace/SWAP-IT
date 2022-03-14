@@ -83,6 +83,7 @@ input:focus {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 .mapboxgl-ctrl-geocoder--input {
@@ -120,3 +121,4 @@ input:focus {
   border-radius: 0;
   height: 37px;
 }
+
