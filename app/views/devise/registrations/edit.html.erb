@@ -1,6 +1,6 @@
   <div class="container-formularios-duplo-form">
 
-    <div class="container-formularios-simples">
+    <div class="container-formularios-simples-3">
         <div class="form-swapit-2">
           <h1 class="title">edit user</h1>
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -9,7 +9,7 @@
                       required: true,
                       autofocus: true,
                         input_html: { autocomplete: "name" }%>
-          <%= f.input :password,:label => "password",
+          <%= f.input :password,:label => "new password",
                       placeholder: 'min of 6 characters',
                       required: false,
                       input_html: { autocomplete: "new password" } %>
@@ -29,9 +29,9 @@
         </div>
 
       </div>
-
-    <%= f.button :submit, "save your changes", class: "button-04"%>
-    <% end %>
-    <%= link_to "delete account", registration_path(resource_name), class:"button-detail", data: { confirm: "are you sure?" }, method: :delete %>
-
+      <div class="container-botao">
+        <%= f.button :submit, "save your changes", class: "button-04"%>
+        <% end %>
+        <%= link_to "delete account", registration_path(resource_name), class:"button-detail", data: { confirm: "are you sure?" }, method: :delete %>
+    </div>
   </div>
