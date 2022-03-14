@@ -1,10 +1,10 @@
 alert {
-  position: fixed;
   color: red;
   bottom: 16px;
   right: 16px;
-  z-index: 1000;
   font-family: "Sen", sans-serif;
+  margin-bottom: 30px;
+  width: 20%;
 }
 
 .alert-info {
@@ -12,6 +12,8 @@ alert {
   background-color: #12e2a3;
   opacity: 0.5;
   font-family: "Sen", sans-serif;
+  margin-bottom: 30px;
+  width: 20%;
 }
 
 .alert-warning {
@@ -19,4 +21,6 @@ alert {
   background-color: #ff0000;
   opacity: 0.5;
   font-family: "Sen", sans-serif;
+  margin-bottom: 30px;
+  width: 20%;
 }

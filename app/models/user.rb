@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_one_attached :photo
   # has_many :messages, dependent: :destroy
   # has_many :matches, through: :stuffs, dependent: :destroy
+
 end

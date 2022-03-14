@@ -1,27 +1,28 @@
-<div class="d-flex justify-content-center align-items-center">
+<div class="container-formularios-simples">
   <div class="form-swapit">
-    <h2 style="text-align: center">sign in</h2>
+    <h2 class="title">sign in</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
         <%= f.input :email,:label => "email",
+                    placeholder: 'email@email.com',
                     required: false,
                     autofocus: true,
                     input_html: { autocomplete: "email" } %>
 
         <%= f.input :password,:label => "password",
                     required: false,
+                    placeholder: 'min of 6 characters',
                     input_html: { autocomplete: "current-password" } %>
-
-        <%= link_to "forgot password?", new_password_path(resource_name), class: "button-04"%><br/><br/>
+        <%= f.input :remember_me, :label => "remeber me", class: "button-detail", as: :boolean if devise_mapping.rememberable? %>
+        <%= link_to "forgot password?", new_password_path(resource_name), class: "button-detail" %><br/><br/>
 
         <div class="form-actions">
           <%= f.button :submit, "sign in", class: "button-04" %>
         </div>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+
       </div>
     <% end %>
 
-    <%#= render "devise/shared/links" %>
   </div>
 </div>

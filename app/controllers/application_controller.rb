@@ -11,11 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if current_user.stuffs.count > 0
-      new_like_path
-    else
-      new_stuff_path
-    end
+    new_like_path
   end
 
 end
