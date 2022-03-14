@@ -99,7 +99,7 @@
 
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
   margin: auto 2vw auto 2vw;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.2rem;
   color: $branco;
   font-family: "Sen", sans-serif;
@@ -107,14 +107,15 @@
 
 .dropdown-menu {
   background-color: $verde-agua;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .dropdown-item {
   color: $branco;
   font-family: "Sen", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.2rem;
+  opacity: 1;
 }
 
 .dropdown-item:hover {
