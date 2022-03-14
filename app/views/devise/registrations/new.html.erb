@@ -6,32 +6,32 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :photo, as: :file %>
+        <%= f.input :photo, :label => "photo",as: :file %>
 
-        <%= f.input :email,
+        <%= f.input :email,:label => "email",
                       placeholder: 'alan@turing.com',
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
 
-        <%= f.input :name,
+        <%= f.input :name,:label => "name",
                       placeholder: 'Alan Turing',
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "name" }%>
 
-        <%= f.input :password,
+        <%= f.input :password,:label => "password",
                     required: true,
                     placeholder: 'min of 6 characters',
                     #hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                     input_html: { autocomplete: "new-password" } %>
 
-        <%= f.input :password_confirmation,
+        <%= f.input :password_confirmation,:label => "password confirmation",
                     required: true,
                     placeholder: 'same password above',
                     input_html: { autocomplete: "new-password" } %>
 
-        <p>now, please register your first item &#128516;</p>
+        <p><em>please register your first item*</em></p>
         <p style="color:red">STILL MISSING THE FIELDS "DESCRIPTION", "DETAILS", "UPLOAD IMAGES"</p>
 
 

@@ -5,12 +5,12 @@
     <%= simple_form_for(@stuff) do |f| %>
 
       <div class="form-inputs">
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-        <%= f.input :name,
+        <%= f.input :photos, :label => "photos",as: :file, input_html: { multiple: true } %>
+        <%= f.input :name,:label => "name",
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "name" }%>
-        <%= f.input :description,
+        <%= f.input :description,:label => "description",
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "description" }%>
