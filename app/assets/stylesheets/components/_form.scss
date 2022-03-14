@@ -76,6 +76,15 @@ input:focus {
   margin: 0 auto;
 }
 
+.container-formularios-duplo-form {
+  // background-color: black;
+  display: flex;
+  height: 87vh;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .mapboxgl-ctrl-geocoder--input {
   font: inherit;
   background-color: transparent;
