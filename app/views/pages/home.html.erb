@@ -1,6 +1,11 @@
 <div class="back-cont">
   <div class="back-folha"></div>
   <div class="back-marrom"></div>
+
+  <% if user_signed_in? %>
+     <%= link_to 'go swap!', new_like_path, class: "go-swap"%>
+  <%end%>
+
   <div id="parent" class="slogan">saving the world, swap by swap.<div id="border"></div></div>
   <div class="cont-clocks">
     <%= image_tag "clock1.png", class:"clock" %>

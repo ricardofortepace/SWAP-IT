@@ -77,6 +77,34 @@
   z-index: 10;
   text-align: center;
   vertical-align: bottom;
+  opacity: 0.85;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
+}
+
+.go-swap {
+  position: absolute;
+  z-index: 30;
+  text-decoration: none;
+  font-family: "Sen", sans-serif;
+  font-size: 35px;
+  color: $verde-agua;
+  font-weight: 400;
+  margin-bottom: 115px;
+  opacity: 1;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+  // border-color: $azul-royal $verde-agua $verde-agua $azul-royal;
+  &:hover {
+    -webkit-text-stroke-width: 1px;
+    color: $verde-agua;
+    font-weight: 700;
+    font-size: 85px;
+    opacity: 0.85;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+  }
 }
 
 ////////
@@ -90,7 +118,7 @@
 }
 
 #border {
-  border-bottom: solid 3px rgba(84, 99, 255, 1);
+  border-bottom: solid 3px $verde-agua;
   position: absolute;
   right: -7px;
   width: 40px;
@@ -98,11 +126,11 @@
 
 /* Animation */
 #parent {
-  animation: animated-text 4s steps(30, end) 1s 1 normal both;
+  animation: animated-text 4s steps(30, end) 1 normal both;
 }
 
 #border {
-  animation: animated-cursor 1500ms steps(30, end) infinite;
+  animation: animated-cursor 600ms steps(30, end) infinite;
 }
 
 /* text animation */
@@ -120,7 +148,7 @@
 
 @keyframes animated-cursor {
   from {
-    border-bottom-color: rgba(84, 99, 255, 1);
+    border-bottom-color: $verde-agua;
   }
   to {
     border-bottom-color: transparent;
