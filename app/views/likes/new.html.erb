@@ -1,5 +1,5 @@
+<div class="container-main">
   <div class="container-my-stuff">
-
     <% @my_stuffs.each do |stuff|%>
       <%= image_tag stuff.photos[0], class:"my-stuff"%>
     <%end %>
@@ -12,26 +12,29 @@
   </div>
 
   <div class="container-description">
+
     <div>
       <p class="their-title">available since</p>
       <p class="their-description"><%=@swap_stuff.created_at.to_date.strftime("%d/%m/%Y")%></p>
     </div>
+
     <div>
       <p class="their-title">?what is it</p>
       <p class="their-description"><%=@swap_stuff.name%></p>
     </div>
+
     <div>
       <p class="their-title">?how far is it</p>
       <p class="their-description">XXkm</p>
     </div>
+
     <div>
       <p class="their-title">details</p>
       <p class="their-description"><%=@swap_stuff.description%></p>
-
     </div>
+
   </div>
 </div>
-
 
 <!-- <div class="container"> -->
 <!--   <div class="row"> -->
