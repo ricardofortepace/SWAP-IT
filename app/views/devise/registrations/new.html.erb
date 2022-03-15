@@ -41,7 +41,6 @@
         <%= f.button :submit, "sign up" , class: "button-04"%>
       </div>
     <% end %>
-
-    <%#= render "devise/shared/links" %>
+    <%= link_to "do you mean to sign in?", new_session_path(resource_name), class: "button-detail"%>
   </div>
 </div>
