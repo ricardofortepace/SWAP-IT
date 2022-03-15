@@ -37,6 +37,9 @@
   font-family: "Sen", sans-serif;
   font-size: 18px;
   text-decoration: none;
+  &:hover {
+    color: $verde-agua;
+  }
 }
 
 #email-user {
@@ -46,6 +49,9 @@
   font-family: "Sen", sans-serif;
   font-size: 12px;
   text-decoration: none;
+  &:hover {
+    color: $verde-agua;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -94,14 +100,13 @@
   letter-spacing: 0.2rem;
   color: $branco;
   font-family: "Sen", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
   margin: auto 2vw auto 2vw;
-  font-weight: 800;
   letter-spacing: 0.2rem;
-  color: $branco;
+  color: $verde-agua;
   font-family: "Sen", sans-serif;
 }
 
@@ -112,7 +117,7 @@
 
 .dropdown-item {
   color: $branco;
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Sen", sans-serif;
   font-weight: 400;
   letter-spacing: 0.2rem;

@@ -1,31 +1,29 @@
-alert {
-  color: red;
+.alert {
+  color: #111;
   bottom: 80px;
-  right: -1200px;
   right: 16px;
   font-family: "Sen", sans-serif;
   width: 20%;
-  z-index: 100;
+  opacity: 0.75;
+  z-index: 5000;
 }
 
 .alert-info {
   color: #111;
   bottom: 80px;
-  right: -1200px;
   background-color: #12e2a3;
-  opacity: 0.5;
+  opacity: 0.75;
   font-family: "Sen", sans-serif;
   width: 20%;
-  z-index: 100;
+  z-index: 5000;
 }
 
 .alert-warning {
-  color: #fff;
+  color: #111;
   bottom: 80px;
-  right: -1200px;
   background-color: #ff0000;
-  opacity: 0.5;
+  opacity: 0.75;
   font-family: "Sen", sans-serif;
   width: 20%;
-  z-index: 100;
+  z-index: 5000;
 }
