@@ -21,8 +21,8 @@
         <p class="their-description"><%=@stuff.description%></p>
       </div>
       <div class="botoes">
-        <%= link_to 'edit', edit_stuff_path, class: "button-04"%>
-        <%= link_to 'delete', stuff_path(@stuff), method: 'DELETE', class: "button-04", data: { confirm: "are you sure?" } %>
+        <%= link_to 'delete', stuff_path(@stuff), method: 'DELETE', class:"botoes-azuis", data: { confirm: "are you sure?" } %>
+        <%= link_to 'edit', edit_stuff_path, class:"botoes-azuis"%>
       </div>
     </div>
 

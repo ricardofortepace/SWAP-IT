@@ -16,14 +16,18 @@
   width: 200px;
   height: 200px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-  border-radius: 5px;
+  border-radius: 2px;
   margin: 2rem;
 }
 
-.detail {
+.imagem .text-decoration-none img {
+  border-radius: 2px;
+}
+
+.detail-info {
+  text-decoration: none;
   width: 100%;
   max-width: 100%;
-  // background-color: rgba(0, 0, 0, 0.5);
   text-align: right;
   padding: 5px;
   font-weight: 700;
@@ -36,4 +40,8 @@
   &:hover {
     color: $verde-agua;
   }
+}
+
+.no-deco {
+  text-decoration: none;
 }

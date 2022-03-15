@@ -1,9 +1,9 @@
 <div class="container-stuffs text-decoration-none">
     <% @stuffs.each do |stuff| %>
-      <%= link_to stuff do %>
+      <%= link_to stuff, class:"no-deco" do %>
           <div class="imagem text-decoration-none">
             <%= cl_image_tag(stuff.photos.first.key, height: 200, width: 200, crop: :fill)%>
-            <p class="detail text-decoration-none"><%=stuff.name%></p>
+            <p class="detail-info"><%=stuff.name%></p>
         </div>
       <%end%>
     <% end %>
