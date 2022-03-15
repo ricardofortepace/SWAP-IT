@@ -40,7 +40,7 @@ class StuffsController < ApplicationController
     stuff = Stuff.find(params[:id])
     stuff.destroy
 
-    redirect_to edit_user_registration_path, notice: 'Stuff gone!'
+    redirect_to stuffs_path, notice: 'Stuff gone!'
   end
 
   def index
