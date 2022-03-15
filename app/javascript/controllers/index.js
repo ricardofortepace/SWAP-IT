@@ -8,6 +8,8 @@ const application = Application.start();
 const context = require.context("controllers", true, /_controller\.js$/);
 application.load(definitionsFromContext(context));
 
+////////////////////////////////
+
 var cnt1 = document.getElementById("count1");
 var water1 = document.getElementById("water1");
 var percent1 = cnt1.innerText;
@@ -49,3 +51,5 @@ interval3 = setInterval(function () {
     clearInterval(interval3);
   }
 }, 60);
+
+////////////////////////////////
