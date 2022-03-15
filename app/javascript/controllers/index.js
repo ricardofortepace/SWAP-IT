@@ -47,7 +47,7 @@ interval3 = setInterval(function () {
   percent3++;
   cnt3.innerHTML = percent3;
   water3.style.transform = "translate(0" + "," + (100 - percent3) + "%)";
-  if (percent3 == 71) {
+  if (percent3 == 39) {
     clearInterval(interval3);
   }
 }, 60);

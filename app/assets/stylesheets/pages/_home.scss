@@ -181,7 +181,7 @@
     top: 0;
     z-index: 3;
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     display: -webkit-flex;
     align-items: center;
@@ -190,8 +190,8 @@
     font-size: 30px;
     font-family: "Sen", sans-serif;
     font-weight: 400;
-    padding-bottom: 35px;
   }
+
   .water {
     position: absolute;
     left: 0;
@@ -234,7 +234,7 @@
 }
 
 .text-js {
-  padding-top: 35px;
+  margin-top: 35px;
   position: absolute;
   left: 0;
   top: 0;
@@ -249,4 +249,8 @@
   font-size: 15px;
   font-family: "Sen", sans-serif;
   font-weight: 400;
+  overflow-wrap: break-word;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
 }
