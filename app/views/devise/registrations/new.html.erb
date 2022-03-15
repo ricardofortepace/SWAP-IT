@@ -12,24 +12,28 @@
                       placeholder: 'alan@turing.com',
                       required: true,
                       autofocus: true,
-                      input_html: { autocomplete: "email" }%>
 
+                      input_html: { autocomplete: "email" }%>
         <%= f.input :name,:label => "name",
                       placeholder: 'Alan Turing',
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "name" }%>
 
+        <%= f.input :address, :label => "address",
+                      input_html: { data: { geocoder_target: "address" }, class: "d-none", id: "search-item" },
+                      wrapper_html: { data: { controller: "geocoder",
+                      geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
+
         <%= f.input :password,:label => "password",
-                    required: true,
-                    placeholder: 'min of 6 characters',
-                    #hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
+                      required: true,
+                      placeholder: 'min of 6 characters',
+                      input_html: { autocomplete: "new-password" } %>
 
         <%= f.input :password_confirmation,:label => "password confirmation",
-                    required: true,
-                    placeholder: 'password confirmation',
-                    input_html: { autocomplete: "new-password" } %>
+                      required: true,
+                      placeholder: 'password confirmation',
+                      input_html: { autocomplete: "new-password" } %>
 
       </div>
 
