@@ -65,7 +65,7 @@
   opacity: 0.85;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
-  margin-top: 90px;
+  margin-top: 115px;
 }
 
 .go-swap {
@@ -90,6 +90,7 @@
     font-size: 85px;
     opacity: 0.85;
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.35s;
   }
 }
 
@@ -214,7 +215,7 @@
         left: 0;
         fill: $azul-claro;
         margin-bottom: -1px;
-        animation: wave-front 0.7s infinite linear;
+        animation: wave-front 2s infinite linear;
       }
     }
   }
@@ -232,7 +233,7 @@
   }
 }
 
-.text {
+.text-js {
   padding-top: 35px;
   position: absolute;
   left: 0;
