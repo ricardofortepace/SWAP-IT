@@ -1,37 +1,34 @@
 <div class="container-main">
 
   <div class="container-my-stuff">
-    <%=image_tag "teste.png", class: "my-stuff"%>
-    <%=image_tag "teste.png", class: "my-stuff"%>
-    <%=image_tag "teste.png", class: "my-stuff"%>
-    <%=image_tag "teste.png", class: "my-stuff"%>
-    <%=image_tag "teste.png", class: "my-stuff"%>
-    <%=image_tag "teste.png", class: "my-stuff"%>
-    <%=image_tag "teste.png", class: "my-stuff"%>
+
+    <% @my_stuffs.each do |stuff|%>
+      <%= image_tag stuff.photos[0], class:"my-stuff"%>
+    <%end %>
   </div>
 
   <div class="container-likes">
+    <div class="their-stuff" style="background-image: url(<%= cl_image_path(@swap_stuff.photos.first.key)%>)"></div>
     <%=image_tag "like.png", id:"like-btn"%>
     <%=image_tag "dislike.png", id:"dislike-btn"%>
-    <%=image_tag "teste.png", class: "their-stuff"%>
   </div>
 
   <div class="container-description">
     <div>
       <p class="their-title">available since</p>
-      <p class="their-description">dd/mm/aaaa</p>
+      <p class="their-description"><%=@swap_stuff.created_at.to_date.strftime("%d/%m/%Y")%></p>
     </div>
     <div>
       <p class="their-title">?what is it</p>
-      <p class="their-description">Lorem Ipsum</p>
+      <p class="their-description"><%=@swap_stuff.name%></p>
     </div>
     <div>
       <p class="their-title">?how far is it</p>
-      <p class="their-description">99km</p>
+      <p class="their-description">XXkm</p>
     </div>
     <div>
       <p class="their-title">details</p>
-      <p class="their-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula ut diam feugiat accumsan. Maecenas erat justo, interdum ut justo in, maximus elementum velit. Nulla facilisi. Maecenas magna nisi, viverra id enim fringilla, fermentum convallis elit. Proin purus nibh, accumsan eu nisi nec, elementum efficitur lorem. Suspendisse varius laoreet libero at commodo. Pellentesque quis justo elit. In ac libero vel ex pellentesque ultrices nec sit amet eros. Vestibulum luctus id sapien at tincidunt. Praesent facilisis nulla nec felis lacinia, quis porta eros pellentesque. Nunc porta, risus et feugiat auctor, erat orci posuere leo, et pulvinar arcu turpis eget mi. Ut non enim id sem facilisis porta. Fusce diam neque, viverra in ultricies sit amet, tempus eget nisl. Nam vehicula laoreet elit, ut dapibus lacus tempus ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p class="their-description"><%=@swap_stuff.description%></p>
     </div>
   </div>
 
@@ -93,4 +90,4 @@
 
 
   </div>
-</div> %>
+</div>
