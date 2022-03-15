@@ -5,11 +5,11 @@
     <%= simple_form_for(@stuff) do |f| %>
 
       <div class="form-inputs">
-        <%= f.input :photos, :label => "photos",as: :file, input_html: { multiple: true } %>
-        <%= f.input :name,:label => "name",
+        <%= f.input :photos, :label => "replace photos",as: :file, input_html: { multiple: true } %>
+        <%= f.input :name,:label => "new name",
                     required: true,
                     autofocus: true,
-                    input_html: { autocomplete: "name" }%>
+                    input_html: { autocomplete: "new name" }%>
         <%= f.input :description,:label => "description",
                     required: true,
                     autofocus: true,
@@ -21,7 +21,6 @@
 
       <div class="form-actions">
         <%= f.button :submit, "save changes", class: "button-04 mb-2" %>
-        <%= link_to 'delete stuff', stuff_path(@stuff), method: 'DELETE', class: "button-detail", data: { confirm: "are you sure?"} %>
       </div>
     <% end %>
   </div>

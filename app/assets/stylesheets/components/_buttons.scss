@@ -1,15 +1,22 @@
 .button-04 {
   // background: none;
   color: $azul-claro;
-  border-width: 2px;
-  border-color: $azul-royal $verde-agua $verde-agua $azul-royal;
+
+  border-right: 2px solid $verde-agua;
+  border-bottom: 2px solid $verde-agua;
+  border-top: 2px solid $azul-royal;
+  border-left: 2px solid $azul-royal;
+
   width: 100%;
   font-size: 18px;
   font-weight: 700;
   &:hover {
     color: $branco;
     background-color: $azul-claro;
-    border-color: $verde-agua $azul-royal $azul-royal $verde-agua;
+    border-left: 2px solid $verde-agua;
+    border-top: 2px solid $verde-agua;
+    border-bottom: 2px solid $azul-royal;
+    border-right: 2px solid $azul-royal;
   }
 }
 
