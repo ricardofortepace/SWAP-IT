@@ -59,12 +59,26 @@ input:focus {
   max-height: 87vh;
 }
 
+// .container-formularios-simples-up {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 87vh;
+//   max-height: 87vh;
+// }
+
+.form-swapit-up {
+  width: 31.5vw;
+  // color: $azul-claro;
+}
+
 .container-formularios-simples-3 {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 45vh;
   margin-top: 15vh;
+  // margin-left: -3.5vh;
 }
 
 .container-formularios-duplo {
@@ -81,7 +95,7 @@ input:focus {
   display: flex;
   height: 87vh;
   flex-direction: column;
-  width: 103.5%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -104,9 +118,9 @@ input:focus {
 }
 
 .mapboxgl-ctrl-geocoder--input {
-  width: 33vw;
+  width: 31.5vw;
   max-width: 100%;
-  min-width: 33vw;
+  min-width: 31.5vw;
 }
 
 .form-select {
@@ -122,6 +136,6 @@ input:focus {
 }
 
 .container-botao {
-  width: 67vw;
+  width: 64.5vw;
   margin: 0 auto;
 }
