@@ -11,6 +11,7 @@
     <%=image_tag "dislike.png", id:"dislike-btn"%>
   </div>
 
+
   <div class="container-description">
 
     <div>
@@ -31,6 +32,10 @@
     <div>
       <p class="their-title">details</p>
       <p class="their-description"><%= @swap_stuff.description %></p>
+    </div>
+
+    <div class="botoes">
+        <%= link_to 'share', new_like_path, class:"botoes-azuis"%>
     </div>
 
   </div>

@@ -2,8 +2,11 @@ class LikesController < ApplicationController
   def new
     # ADICIONAR uma variavel para aplicar o range nos stuffs pertencentes somente aos usuarios proximos
     # @user_near = User.near(params[:address], params[:range]) if params[:address].present?
+
+
+
     if current_user.stuffs.empty?
-      redirect_to new_stuff_path, notice: "you still need to add some stuff to swap."
+      redirect_to new_stuff_path, notice: "You still need to add some stuff to swap."
       return
     end
 
@@ -16,7 +19,10 @@ class LikesController < ApplicationController
       redirect_to root_path, notice: "Sorry, but we dont have stuffs in your range."
       return
     end
-    
+
+
+
+
     @swap_stuff = Stuff.near(current_user, current_user.range).where.not(user: current_user).sample
 
     # @swap_stuff = Stuff.where.not(user: current_user).sample

@@ -25,8 +25,6 @@
               <%= image_tag "https://www.leaguegaming.com/tpl/homepage/img/lg/empty_profile.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <%end%>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%# <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%# <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "go swap", new_like_path, class: "dropdown-item" %>
               <%= link_to "see all my stuff", stuffs_path, class: "dropdown-item"%>
               <%= link_to "add some stuff", new_stuff_path, class: "dropdown-item" %>

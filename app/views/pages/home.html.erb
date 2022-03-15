@@ -1,14 +1,18 @@
 <div class="back-cont">
-  <div class="back-folha"></div>
-  <div class="back-marrom"></div>
+  <div class="back-folha">
+  </div>
+  <%# <div class="back-marrom"></div> %>
 
   <% if user_signed_in? %>
      <%= link_to 'go swap', new_like_path, class: "go-swap"%>
   <%end%>
 
-  <div id="parent" class="slogan">changing the world, swap by swap.<div id="border"></div>
+  <div id="parent" class="slogan">changing the world, swap by swap.
+    <div id="border">
+    </div>
+  </div>
 
-</div>
+  <h2 class="cta">making a more sustainable planet for our children, shall we all swap our belongings instead of buying brand new ones?</h2>
 
 
 <div class="cont-clocks" data-controller="water-level">
