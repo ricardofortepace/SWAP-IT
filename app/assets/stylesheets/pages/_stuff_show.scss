@@ -21,9 +21,18 @@
 .my-see-stuff {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 1px;
   z-index: 50;
   &:hover {
     transform: scale(1.3);
   }
+}
+
+a .botoes-azuis {
+  // background: none;
+  color: $azul-claro;
+  border-width: 2px;
+  border-color: $azul-royal $verde-agua $verde-agua $azul-royal;
+  font-size: 18px;
+  font-weight: 700;
 }

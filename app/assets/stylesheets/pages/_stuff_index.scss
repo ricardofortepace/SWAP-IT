@@ -16,8 +16,12 @@
   width: 200px;
   height: 200px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-  border-radius: 5px;
+  border-radius: 2px;
   margin: 2rem;
+}
+
+.imagem .text-decoration-none img {
+  border-radius: 2px;
 }
 
 .detail {
