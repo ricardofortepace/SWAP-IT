@@ -96,8 +96,6 @@
 
 ////////
 
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
-
 #parent {
   white-space: nowrap;
   overflow: hidden;
@@ -113,7 +111,7 @@
 
 /* Animation */
 #parent {
-  animation: animated-text 8s steps(30, end) 1 normal both;
+  animation: animated-text 12s steps(30, end) 1 normal both;
   animation-iteration-count: infinite;
 }
 
@@ -128,7 +126,7 @@
     width: 0;
   }
   to {
-    width: 1200px;
+    width: 1400px;
   }
 }
 
