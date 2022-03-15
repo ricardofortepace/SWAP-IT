@@ -10,6 +10,6 @@ class User < ApplicationRecord
   has_one_attached :photo
   # has_many :messages, dependent: :destroy
   # has_many :matches, through: :stuffs, dependent: :destroy
-  validates :name, :email, presence: true
+  validates :name, :email, :address, presence: true
   # validates :range, inclusion: {in: 1..269}
 end
