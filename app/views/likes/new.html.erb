@@ -6,7 +6,37 @@
   </div>
 
   <div class="container-likes">
+
+    <%if @swap_stuff.photos.length > 1%>
+      <div class="their-stuff">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class=”carousel-inner”>
+              <%@swap_stuff.photos.each_with_index do |photo, i|%>
+                <div class="carousel-item <%= "active" if i==0 %>">
+                  <%=cl_image_tag photo.key, class:"d-block w-100 altura-cont" %>
+                </div>
+              <%end%>
+            </div>
+          <div class="carousel-buttons">
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+      </div>
+    <%else%>
     <div class="their-stuff" style="background-image: url(<%=cl_image_path(@swap_stuff.photos.first.key)%>)"></div>
+    <%end%>
+  </div>
+
+
     <%=image_tag "like.png", id:"like-btn"%>
     <%=image_tag "dislike.png", id:"dislike-btn"%>
   </div>
