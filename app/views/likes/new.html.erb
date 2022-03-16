@@ -38,7 +38,7 @@
     <%else%>
       <div class="their-stuff" style="background-image: url(<%=cl_image_path(@swap_stuff.photos.first.key)%>)"></div>
     <%end%>
-  
+
     <div data-action="click->like-button#submitlike" ><%=image_tag "like.png", id:"like-btn"%></div>
     <div data-action="click->like-button#submitdislike" ><%=image_tag "dislike.png", id:"dislike-btn"%></div>
   </div>
@@ -65,6 +65,7 @@
       <p class="their-title">details</p>
       <p class="their-description"><%= @swap_stuff.description.capitalize %></p>
     </div>
+
 
     <div class="botoes">
         <%= link_to 'share', new_like_path, class:"botoes-azuis"%>
