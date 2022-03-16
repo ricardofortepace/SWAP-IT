@@ -29,7 +29,7 @@
 
 .botoes {
   display: flex;
-  width: 40%;
+  width: 60%;
   justify-content: space-between;
   gap: 20px;
 }
@@ -99,5 +99,28 @@
     border-top: 1px solid #5463ff;
     border-bottom: 1px solid #9c6644;
     border-right: 1px solid #9c6644;
+  }
+}
+
+.botoes-all_my_stuff {
+  border-right: 1px solid $azul-claro;
+  border-bottom: 1px solid $azul-claro;
+  border-top: 1px solid $azul-royal;
+  border-left: 1px solid $azul-royal;
+
+  text-decoration: none;
+  color: $azul-royal;
+
+  font-size: 16px;
+  font-weight: 700;
+  padding: 3px 20px;
+  margin-top: 10px;
+  &:hover {
+    color: $branco;
+    background-color: $azul-royal;
+    border-left: 1px solid $azul-claro;
+    border-top: 1px solid $azul-claro;
+    border-bottom: 1px solid $azul-royal;
+    border-right: 1px solid $azul-royal;
   }
 }
