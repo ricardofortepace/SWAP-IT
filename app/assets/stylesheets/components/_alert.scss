@@ -1,29 +1,19 @@
 .alert {
   color: #111;
-  bottom: 80px;
-  right: 16px;
+  bottom: 20px;
+  right: 15px;
   font-family: "Sen", sans-serif;
-  width: 20%;
+  font-size: 14px;
+  width: 15%;
   opacity: 0.75;
   z-index: 5000;
+  position: absolute;
 }
 
 .alert-info {
-  color: #111;
-  bottom: 80px;
   background-color: #12e2a3;
-  opacity: 0.75;
-  font-family: "Sen", sans-serif;
-  width: 20%;
-  z-index: 5000;
 }
 
 .alert-warning {
-  color: #111;
-  bottom: 80px;
   background-color: #ff0000;
-  opacity: 0.75;
-  font-family: "Sen", sans-serif;
-  width: 20%;
-  z-index: 5000;
 }
