@@ -7,6 +7,7 @@
 <%# </div> %>
 
 <div class="container-main" data-controller="like-button">
+  <div class="swap-it swap-it-none">SWAP IT!</div>
 
   <div class="container-my-stuff">
     <%= simple_form_for @like, html: { remote: true, data: { like_button_target: 'likeform'}} do |f| %>
