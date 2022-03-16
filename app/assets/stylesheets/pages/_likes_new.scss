@@ -35,14 +35,19 @@
 }
 
 .their-stuff {
-  object-fit: contain;
-  // min-width: 100%;
   min-height: 100%;
-  // width: auto;
-  // height: auto;
   max-width: 100%;
   max-height: 100%;
-  background-size: cover;
+  // object-fit: contain;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+}
+
+.altura-cont {
+  height: 87.3vh;
+  object-fit: cover;
+  // background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

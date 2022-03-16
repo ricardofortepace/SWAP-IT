@@ -22,7 +22,7 @@
           <%= f.input :address, :label => "new address",
                       input_html: { data: { geocoder_target: "address" }, class: "d-none", id: "search-item" },
                       wrapper_html: { data: { controller: "geocoder",
-                      required: false, geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
+                      required: true, geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
           <%= f.input :current_password,:label => "current_password",
                       required: true,
                       input_html: { autocomplete: "current password" } %>
