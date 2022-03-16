@@ -20,7 +20,7 @@ class LikesController < ApplicationController
 
     @swap_stuff = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).sample
 
-    # @swap_stuff = Stuff.where.not(user: current_user).sample
+    #@swap_stuff = Stuff.where.not(user: current_user).sample
 
     @my_stuffs = current_user.stuffs
     @like = Like.new
@@ -28,18 +28,19 @@ class LikesController < ApplicationController
 
   def create
     like = Like.new(like_params)
-    like.stuff = Stuff.find(params[:like][:stuff])
-    like.trading_stuff = Stuff.find(params[:like][:trading_stuff])
+    stuff = Stuff.find(params[:like][:stuff])
+    trading_stuff = Stuff.find(params[:like][:trading_stuff])
+    teste = Like.find_by(stuff: trading_stuff, trading_stuff: stuff)
+    like.stuff = stuff
+    like.trading_stuff = trading_stuff
     like.save!
-    redirect_to new_like_path
-    # raise
-    # if status?
-    #   @chat = Chatroom.new(name: like.stuff.name)
-    #   @chat.save
-    #   redirect_to chatroom_path(@chat)
-    # else
-    #   redirect_to new_like_path
-    # end
+    if teste && teste.status
+      @chat = Chatroom.new(name: like.stuff.name)
+      @chat.save
+      redirect_to chatroom_path(@chat)
+    else
+      redirect_to new_like_path
+    end
   end
 
   private
