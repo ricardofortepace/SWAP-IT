@@ -1,14 +1,17 @@
-<div class="container-main">
+<div class="container-main" data-controller="like-button">
   <div class="container-my-stuff">
-    <% @my_stuffs.each do |stuff|%>
-      <%= image_tag stuff.photos[0], class:"my-stuff"%>
-    <%end %>
+    <%= simple_form_for @like, html: { remote: true, data: { like_button_target: 'likeform'}} do |f| %>
+      <%= f.input :stuff, as: :radio_buttons, collection: @my_stuffs %>
+      <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
+      <%= f.input :status, as: :radio_buttons, collection: [['like', true], ['dislike', false]] %>
+      <%= f.button :submit, 'proximo', class: 'btn btn-success'%>
+    <% end %>
   </div>
 
   <div class="container-likes">
     <div class="their-stuff" style="background-image: url(<%=cl_image_path(@swap_stuff.photos.first.key)%>)"></div>
-    <%=image_tag "like.png", id:"like-btn"%>
-    <%=image_tag "dislike.png", id:"dislike-btn"%>
+    <div data-action="click->like-button#submitlike" ><%=image_tag "like.png", id:"like-btn"%></div>
+    <div data-action="click->like-button#submitdislike" ><%=image_tag "dislike.png", id:"dislike-btn"%></div>
   </div>
 
 
@@ -37,35 +40,5 @@
     <div class="botoes">
         <%= link_to 'share', new_like_path, class:"botoes-azuis"%>
     </div>
-
   </div>
 </div>
-
-
-
-
-<%
-=begin %>
-
-<div class="container-likes">
-  <div class="row">
-    <div class="col-3">
-      <%= simple_form_for @like do |f| %>
-        <%= f.input :stuff, as: :radio_buttons, collection: @my_stuffs %>
-        <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
-        <%= f.input :status, as: :radio_buttons, collection: [['like', true], ['dislike', false]]  %>
-        <%= f.button :submit, 'proximo', class: 'btn btn-success'%>
-      <% end %>
-    </div>
-     <div class="col-6">
-      <%= cl_image_tag (@swap_stuff.photos.first.key) %>
-     </div>
-    <div class="col-3">
-      <p>My stuff info </p>
-      <%= @swap_stuff.description %>
-     </div>
-  </div>
-</div>
-
-<%
-=end %>
