@@ -65,10 +65,8 @@
       <p class="their-description"><%=@swap_stuff.name.downcase%></p>
     </div>
 
-    <div>
-      <p class="their-title">?how far is it</p>
-      <p class="their-description"><%=@swap_stuff.user.range%>km</p>
-    </div>
+    <p class="their-title" data-controller="turf" data-turf-current-latitude-value=<%="#{current_user.latitude}"%>  data-turf-current-longitude-value=<%="#{current_user.longitude}"%> data-turf-user-stuff-latitude-value=<%="#{@swap_stuff.user.latitude}"%> data-turf-user-stuff-longitude-value=<%="#{@swap_stuff.user.longitude}"%> data-turf-target="distancia">?how far is it</p>
+
 
     <div>
       <p class="their-title">details</p>
@@ -81,4 +79,8 @@
     </div>
 
   </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 </div>
