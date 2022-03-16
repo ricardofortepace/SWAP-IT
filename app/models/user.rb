@@ -13,3 +13,5 @@ class User < ApplicationRecord
   validates :name, :email, :address, presence: true
   # validates :range, inclusion: {in: 1..269}
 end
+
+#ricardo é
