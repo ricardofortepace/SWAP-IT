@@ -7,7 +7,6 @@ class StuffsController < ApplicationController
   end
 
 
-
   def create
     @stuff = Stuff.new(stuff_params)
     @stuff.user = current_user
