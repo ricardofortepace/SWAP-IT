@@ -12,8 +12,6 @@
                     autofocus: true,
                     input_html: { autocomplete: "email" }%>
 
-
-
         <%= f.input :password,:label => "password",
                     required: true,
                     placeholder: 'min of 6 characters',
@@ -44,5 +42,6 @@
       <% end %>
       <%= link_to "do you mean to sign in?", new_session_path(resource_name), class: "button-detail"%>
     </div>
+
   </div>
 </div>
