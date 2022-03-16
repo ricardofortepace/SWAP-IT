@@ -2,7 +2,7 @@
 
   <div class="container-my-stuff">
     <%= simple_form_for @like, html: { remote: true, data: { like_button_target: 'likeform'}} do |f| %>
-      <%= f.input :stuff, as: :radio_buttons, collection: @my_stuffs %>
+      <%= f.input :stuff, as: :radio_buttons, collection: @my_stuffs, checked: 1 %>
       <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
       <%= f.input :status, as: :radio_buttons, collection: [['like', true], ['dislike', false]] %>
       <%= f.button :submit, 'proximo', class: 'btn btn-success'%>
