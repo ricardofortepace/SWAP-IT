@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
+.swap-it {
+  font-family: "Bangers", cursive;
+  position: absolute;
+  text-align: center;
+  left: 27.5vw;
+  top: 20vh;
+  font-size: 15vw;
+  color: #FFD32D;
+  z-index: 5000;
+  -webkit-text-stroke-color: #5463FF;
+  -webkit-text-stroke-width: 7px;
+  text-shadow: 20px 30px 10px rgba(0, 0, 0, 0.5);
+}
+.swap-it-none {
+  display: none;
+
 .text-none {
   text-indent: 100%;
   white-space: nowrap;

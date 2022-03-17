@@ -9,6 +9,8 @@
 <div class="container-main" data-controller="like-button">
   <div class="swap-it swap-it-none">SWAP IT!</div>
 
+  <div class="swap-it swap-it-none">SWAP IT!</div>
+
   <div class="container-my-stuff">
     <%= simple_form_for @like, html: { data: { like_button_target: 'likeform'}} do |f| %>
       <div class="text-none imagem-fundo my-stuff"><%= f.input :stuff, :label => "", as: :radio_buttons, collection: @my_stuffs, checked: @selected_stuff_id %></div>
@@ -31,6 +33,7 @@
             <%end%>
           </div>
         </div>
+
         <div class="carousel-buttons">
 
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -77,6 +80,5 @@
     <div class="botoes">
         <%= link_to 'share', "https://trex-runner.com/", target: "_blank", class:"botoes-azuis"%>
     </div>
-
   </div>
 </div>
