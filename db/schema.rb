@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_16_062648) do
+ActiveRecord::Schema.define(version: 2022_03_17_164609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,9 +44,12 @@ ActiveRecord::Schema.define(version: 2022_03_16_062648) do
   end
 
   create_table "chatrooms", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "trading_stuff_id", null: false
+    t.bigint "stuff_id", null: false
+    t.index ["stuff_id"], name: "index_chatrooms_on_stuff_id"
+    t.index ["trading_stuff_id"], name: "index_chatrooms_on_trading_stuff_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -100,6 +103,8 @@ ActiveRecord::Schema.define(version: 2022_03_16_062648) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "chatrooms", "stuffs"
+  add_foreign_key "chatrooms", "stuffs", column: "trading_stuff_id"
   add_foreign_key "likes", "stuffs"
   add_foreign_key "likes", "stuffs", column: "trading_stuff_id"
   add_foreign_key "messages", "chatrooms"
