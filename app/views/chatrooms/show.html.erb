@@ -1,12 +1,13 @@
 <div class="container chatroom container-chatroom" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
 
-  <h1>tema</h1>
+
+  <h1><%=@chatroom.stuff.name%> X <%=@chatroom.trading_stuff.name%></h1>
 
   <div class="botoes-chat">
-    <%= link_to 'delete chat', chatrooms_path, method: 'DELETE', class:"botoes-marrons", data: { confirm: "are you sure?" } %>
-    <%= link_to "all chats", chatrooms_path, class:"botoes-all_my_stuff"%>
-    <%= link_to 'go home', root_path, class:"botoes-azuis"%>
+    <%= link_to "remove stuff", stuff_path(@chatroom.stuff, stuff: { active: false }), method: :patch %>
+    <%= link_to "all macthes", chatrooms_path, class:"botoes-all_my_stuff"%>
+
     <%= link_to 'go swap', new_like_path, class:"botoes-verdes"%>
   </div>
 

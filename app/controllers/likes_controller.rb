@@ -18,11 +18,11 @@ class LikesController < ApplicationController
       return
     end
 
-    @swap_stuff = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).sample
+    @swap_stuff = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).where.not(active: false).sample
 
     # @swap_stuff = Stuff.where.not(user: current_user).sample
 
-    @my_stuffs = current_user.stuffs
+    @my_stuffs = current_user.stuffs.where.not(active: false)
     @like = Like.new
     @selected_stuff_id = params[:stuff].present? ? params[:stuff] : @my_stuffs.first.id
   end
@@ -36,7 +36,7 @@ class LikesController < ApplicationController
     like.trading_stuff = trading_stuff
     like.save!
 
-    redirect_to new_like_path
+    redirect_to new_like_path(chatroom_id: like.chatroom)
 
   end
 

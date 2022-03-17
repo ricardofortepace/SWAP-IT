@@ -1,5 +1,11 @@
 <div class="container-main" data-controller="like-button">
-  <div class="swap-it swap-it-none" data-controller="swap-it">SWAP IT!</div>
+  <%if params[:chatroom_id]%>
+    <div class="swap-it " data-controller="swap-it">SWAP IT!</div>
+    <div class='d-flex'>
+      <%= link_to "Iniciar a conversa", chatroom_path(params[:chatroom_id]), class: 'btn btn-dark' %>
+      <%= link_to "continuar swap", new_like_path, class: 'btn btn-dark' %>
+    </div>
+  <% end %>
 
   <div class="container-my-stuff">
     <%= simple_form_for @like, html: { data: { like_button_target: 'likeform'}} do |f| %>
