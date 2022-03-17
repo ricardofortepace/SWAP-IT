@@ -13,7 +13,7 @@ class LikesController < ApplicationController
       return
     end
 
-    if Stuff.near(current_user.address, current_user.range).empty?
+    if Stuff.near(current_user.address, current_user.range).where.not(user: current_user).empty?
       redirect_to root_path, notice: "Sorry, but we dont have stuffs in your range."
       return
     end
