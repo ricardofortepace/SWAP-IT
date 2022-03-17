@@ -20,7 +20,7 @@ class LikesController < ApplicationController
 
     @swap_stuff = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).sample
 
-    #@swap_stuff = Stuff.where.not(user: current_user).sample
+    # @swap_stuff = Stuff.where.not(user: current_user).sample
 
     @my_stuffs = current_user.stuffs
     @like = Like.new
