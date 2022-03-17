@@ -35,8 +35,8 @@ class LikesController < ApplicationController
     like.stuff = stuff
     like.trading_stuff = trading_stuff
     like.save!
-
-    redirect_to new_like_path
+    
+    redirect_to new_like_path(chatroom_id: like.chatroom)
 
   end
 

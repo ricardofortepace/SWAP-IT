@@ -1,7 +1,7 @@
 <div class="container chatroom container-chatroom" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
 
-  <h1><%=@chatroom.name%></h1>
+  <h1><%=@chatroom.stuff.name%> X <%=@chatroom.trading_stuff.name%></h1>
 
   <div class="botoes-chat">
     <%= link_to "delete match", chatrooms_path, class:"botoes-marrons"%>
