@@ -15,6 +15,19 @@
 }
 .swap-it-none {
   display: none;
+
+.text-none {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.imagem-fundo {
+  background-image: url("https://play-lh.googleusercontent.com/37yFvU3dquBbGOxazEfm_O8lJHk5E6qbxiYVTDIT9zjYs1o033QBTNZCE8pO3aBbrg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
 }
 
 .container-main {
