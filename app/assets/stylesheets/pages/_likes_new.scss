@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
-#be-invisible {
-  opacity: 0;
-  position: absolute;
-  z-index: -1000;
+.text-none {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .container-main {

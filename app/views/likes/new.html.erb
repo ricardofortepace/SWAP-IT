@@ -11,10 +11,10 @@
 
   <div class="container-my-stuff">
     <%= simple_form_for @like, html: { data: { like_button_target: 'likeform'}} do |f| %>
-      <%= f.input :stuff, :label => "", as: :radio_buttons, collection: @my_stuffs, checked: @selected_stuff_id %>
-      <%= f.input :trading_stuff, as: :hidden, id:"be-invisible", input_html: { value: @swap_stuff.id } %>
-      <%= f.input :status, :label => "", as: :radio_buttons, id:"be-invisible", collection: [['like', true], ['dislike', false]] %>
-      <%= f.button :submit, 'proximo', id:"be-invisible"%>
+      <div class="text-none imagem-fundo"><%= f.input :stuff, :label => "", as: :radio_buttons, collection: @my_stuffs, checked: @selected_stuff_id %></div>
+      <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
+      <div class="d-none"><%= f.input :status, :label => "", as: :radio_buttons, collection: [['like', true], ['dislike', false]] %></div>
+      <%= f.button :submit, 'proximo', class:"d-none"%>
     <% end %>
   </div>
 
