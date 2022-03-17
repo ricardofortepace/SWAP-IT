@@ -29,7 +29,7 @@
               <%= link_to "all chats", chatrooms_path, class: "dropdown-item" %>
               <%= link_to "all my stuff", stuffs_path, class: "dropdown-item"%>
               <%= link_to "add some stuff", new_stuff_path, class: "dropdown-item" %>
-              <%= link_to "edit user", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "edit user", edit_user_registration_path, data: { turbolinks: false }, class: "dropdown-item" %>
               <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
 
             </div>
@@ -44,7 +44,7 @@
             <p class= "nav-link px-4">|</p>
           </li>
           <li class="nav-item">
-            <%= link_to "sign up", new_user_registration_path, class: "nav-link" %>
+            <%= link_to "sign up", new_user_registration_path, data: { turbolinks: false }, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
