@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+.swap-it {
+  font-family: "Bangers", cursive;
+  position: absolute;
+  text-align: center;
+  left: 27.5vw;
+  top: 20vh;
+  font-size: 15vw;
+  color: #FFD32D;
+  z-index: 5000;
+  -webkit-text-stroke-color: #5463FF;
+  -webkit-text-stroke-width: 7px;
+  text-shadow: 20px 30px 10px rgba(0, 0, 0, 0.5);
+}
+.swap-it-none {
+  display: none;
+}
+
 .container-main {
   height: 87.3vh;
   width: 100%;
@@ -60,6 +79,7 @@
   -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
   z-index: 10;
   opacity: 0.6;
+  cursor: pointer;
   &:hover {
     transform: scale(1.1);
     opacity: 0.85;
@@ -74,6 +94,7 @@
   -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
   z-index: 10;
   opacity: 0.6;
+  cursor: pointer;
   &:hover {
     transform: scale(1.1);
     opacity: 0.85;
