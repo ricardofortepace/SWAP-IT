@@ -32,17 +32,12 @@ class LikesController < ApplicationController
     like = Like.new(like_params)
     stuff = Stuff.find(params[:like][:stuff])
     trading_stuff = Stuff.find(params[:like][:trading_stuff])
-    teste = Like.find_by(stuff: trading_stuff, trading_stuff: stuff)
     like.stuff = stuff
     like.trading_stuff = trading_stuff
     like.save!
-    if teste && teste.status
-      @chat = Chatroom.new(name: like.stuff.name)
-      @chat.save
-      redirect_to chatroom_path(@chat)
-    else
-      redirect_to new_like_path
-    end
+
+    redirect_to new_like_path
+
   end
 
   private
