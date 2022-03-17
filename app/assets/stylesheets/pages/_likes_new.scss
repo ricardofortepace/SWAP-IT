@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
+#be-invisible {
+  opacity: 0;
+  position: absolute;
+  z-index: -1000;
+}
+
 .container-main {
   height: 87.3vh;
   width: 100%;
