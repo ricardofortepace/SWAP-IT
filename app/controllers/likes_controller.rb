@@ -24,14 +24,16 @@ class LikesController < ApplicationController
 
     @my_stuffs = current_user.stuffs
     @like = Like.new
+    @selected_stuff_id = params[:selected_stuff_id].present? ? params[:selected_stuff_id] : @my_stuffs.first.id
   end
 
   def create
+
     like = Like.new(like_params)
     like.stuff = Stuff.find(params[:like][:stuff])
     like.trading_stuff = Stuff.find(params[:like][:trading_stuff])
     like.save!
-    redirect_to new_like_path
+    redirect_to new_like_path(selected_stuff_id: params[:like][:stuff])
     # raise
     # if status?
     #   @chat = Chatroom.new(name: like.stuff.name)
