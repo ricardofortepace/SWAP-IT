@@ -7,14 +7,16 @@
   left: 27.5vw;
   top: 20vh;
   font-size: 15vw;
-  color: #FFD32D;
+  color: #ffd32d;
   z-index: 5000;
-  -webkit-text-stroke-color: #5463FF;
+  -webkit-text-stroke-color: #5463ff;
   -webkit-text-stroke-width: 7px;
   text-shadow: 20px 30px 10px rgba(0, 0, 0, 0.5);
 }
+
 .swap-it-none {
   display: none;
+}
 
 .text-none {
   text-indent: 100%;
@@ -180,5 +182,4 @@
 ::-webkit-scrollbar-thumb {
   background: $azul-claro;
   opacity: 0.4;
-  // border-radius: 10px;
 }
