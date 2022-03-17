@@ -4,7 +4,7 @@
   <%# <div class="back-marrom"></div> %>
 
   <% if user_signed_in? %>
-     <%= link_to 'go swap', new_like_path, class: "go-swap"%>
+     <%= link_to 'go swap', new_like_path, data: { turbolinks: false }, class: "go-swap"%>
   <%end%>
 
   <div id="parent" class="slogan">changing the world, swap by swap.

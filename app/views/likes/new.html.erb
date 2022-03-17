@@ -11,10 +11,12 @@
 
   <div class="container-my-stuff">
     <%= simple_form_for @like, html: { data: { like_button_target: 'likeform'}} do |f| %>
-      <%= f.input :stuff, as: :radio_buttons, collection: @my_stuffs, checked: @selected_stuff_id %>
+      <div class="text-none imagem-fundo my-stuff"><%= f.input :stuff, :label => "", as: :radio_buttons, collection: @my_stuffs, checked: @selected_stuff_id %></div>
       <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
-      <div class='d-none'><%= f.input :status, as: :radio_buttons, collection: [['like', true], ['dislike', false]] %></div>
-      <%= f.button :submit, 'proximo', class: 'btn btn-success d-none'%>
+
+      <div class="d-none"><%= f.input :status, :label => "", as: :radio_buttons, collection: [['like', true], ['dislike', false]] %></div>
+      <%= f.button :submit, 'proximo', class:"d-none"%>
+
     <% end %>
   </div>
 
@@ -76,7 +78,7 @@
 
 
     <div class="botoes">
-        <%= link_to 'share', new_like_path, class:"botoes-azuis"%>
+        <%= link_to 'share', "https://trex-runner.com/", target: "_blank", class:"botoes-azuis"%>
     </div>
   </div>
 </div>
