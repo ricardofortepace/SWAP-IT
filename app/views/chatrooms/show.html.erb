@@ -1,7 +1,15 @@
-<div class="container chatroom" data-controller="chatroom-subscription"
+<div class="container chatroom container-chatroom" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
 
-  <h1>chat:<%= @chatroom.name %></h1>
+  <h1><%=@chatroom.name%></h1>
+
+  <div class="botoes-chat">
+    <%= link_to "delete match", chatrooms_path, class:"botoes-marrons"%>
+    <%= link_to "all macthes", chatrooms_path, class:"botoes-all_my_stuff"%>
+    <%= link_to 'go swap', new_like_path, class:"botoes-verdes"%>
+    <%= link_to 'go home', edit_stuff_path, class:"botoes-azuis"%>
+  </div>
+
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
@@ -20,4 +28,6 @@
     <%= f.submit "send", class: "botoes-azuis-zero" %>
     <% end %>
   </div>
+
+
 </div>
