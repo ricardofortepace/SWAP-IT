@@ -24,11 +24,11 @@ class LikesController < ApplicationController
 
     @my_stuffs = current_user.stuffs
     @like = Like.new
-    @selected_stuff_id = params[:selected_stuff_id].present? ? params[:selected_stuff_id] : @my_stuffs.first.id
+    @selected_stuff_id = params[:stuff].present? ? params[:stuff] : @my_stuffs.first.id
   end
 
   def create
-
+    # raise
     like = Like.new(like_params)
     stuff = Stuff.find(params[:like][:stuff])
     trading_stuff = Stuff.find(params[:like][:trading_stuff])

@@ -1,19 +1,14 @@
-<%# <div class="container-main">
-  <div class="container-my-stuff">
-    <% @my_stuffs.each do |stuff|%>
-      <%# <%= image_tag stuff.photos[0], class:"my-stuff"%>
-    <%# <%end %>
-  <%# </div> %>
-<%# </div> %>
-
 <div class="container-main" data-controller="like-button">
   <div class="swap-it swap-it-none" data-controller="swap-it">SWAP IT!</div>
 
   <div class="container-my-stuff">
     <%= simple_form_for @like, html: { data: { like_button_target: 'likeform'}} do |f| %>
-      <div class="text-none imagem-fundo my-stuff"><%= f.input :stuff, :label => "", as: :radio_buttons, collection: @my_stuffs, checked: @selected_stuff_id %></div>
-      <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
 
+      <%= f.collection_radio_buttons(:stuff, @my_stuffs, :id, :name, options = {checked: @selected_stuff_id}, html_options={class:"quadrado"}) do |n|
+      n.label(id:"bola") {cl_image_tag(Stuff.find(n.value).photos.first.key) + n.radio_button}
+      end %>
+
+      <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
       <div class="d-none"><%= f.input :status, :label => "", as: :radio_buttons, collection: [['like', true], ['dislike', false]] %></div>
       <%= f.button :submit, 'proximo', class:"d-none"%>
 
