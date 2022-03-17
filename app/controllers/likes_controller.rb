@@ -13,20 +13,22 @@ class LikesController < ApplicationController
       return
     end
 
-    if Stuff.near(current_user.address, current_user.range).empty?
+    if Stuff.near(current_user.address, current_user.range).where.not(user: current_user).empty?
       redirect_to root_path, notice: "Sorry, but we dont have stuffs in your range."
       return
     end
 
-    #@swap_stuff = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).sample
+    @swap_stuff = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).sample
 
-    @swap_stuff = Stuff.where.not(user: current_user).sample
+    #@swap_stuff = Stuff.where.not(user: current_user).sample
 
     @my_stuffs = current_user.stuffs
     @like = Like.new
+    @selected_stuff_id = params[:selected_stuff_id].present? ? params[:selected_stuff_id] : @my_stuffs.first.id
   end
 
   def create
+
     like = Like.new(like_params)
     stuff = Stuff.find(params[:like][:stuff])
     trading_stuff = Stuff.find(params[:like][:trading_stuff])

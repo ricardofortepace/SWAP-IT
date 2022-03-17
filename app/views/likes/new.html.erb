@@ -1,10 +1,19 @@
+<%# <div class="container-main">
+  <div class="container-my-stuff">
+    <% @my_stuffs.each do |stuff|%>
+      <%# <%= image_tag stuff.photos[0], class:"my-stuff"%>
+    <%# <%end %>
+  <%# </div> %>
+<%# </div> %>
+
 <div class="container-main" data-controller="like-button">
+  <div class="swap-it swap-it-none">SWAP IT!</div>
 
   <div class="swap-it swap-it-none">SWAP IT!</div>
-  
+
   <div class="container-my-stuff">
-    <%= simple_form_for @like, html: { remote: true, data: { like_button_target: 'likeform'}} do |f| %>
-      <%= f.input :stuff, as: :radio_buttons, collection: @my_stuffs, checked: 1 %>
+    <%= simple_form_for @like, html: { data: { like_button_target: 'likeform'}} do |f| %>
+      <%= f.input :stuff, as: :radio_buttons, collection: @my_stuffs, checked: @selected_stuff_id %>
       <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>
       <%= f.input :status, as: :radio_buttons, collection: [['like', true], ['dislike', false]] %>
       <%= f.button :submit, 'proximo', class: 'btn btn-success'%>
@@ -39,7 +48,7 @@
         </div>
       </div>
     <%else%>
-     <div class="their-stuff" style="background-image: url(<%=cl_image_path(@swap_stuff.photos.first.key)%>)"></div>
+      <div class="their-stuff" style="background-image: url(<%=cl_image_path(@swap_stuff.photos.first.key)%>)"></div>
     <%end%>
 
     <div data-action="click->like-button#submitlike" ><%=image_tag "like.png", id:"like-btn"%></div>
@@ -59,15 +68,14 @@
       <p class="their-description"><%=@swap_stuff.name.downcase%></p>
     </div>
 
-    <div>
-      <p class="their-title">?how far is it</p>
-      <p class="their-description"><%=@swap_stuff.user.range%>km</p>
-    </div>
+    <p class="their-title" data-controller="turf" data-turf-current-latitude-value=<%="#{current_user.latitude}"%>  data-turf-current-longitude-value=<%="#{current_user.longitude}"%> data-turf-user-stuff-latitude-value=<%="#{@swap_stuff.user.latitude}"%> data-turf-user-stuff-longitude-value=<%="#{@swap_stuff.user.longitude}"%> data-turf-target="distancia">?how far is it</p>
+
 
     <div>
       <p class="their-title">details</p>
       <p class="their-description"><%= @swap_stuff.description.capitalize %></p>
     </div>
+
 
     <div class="botoes">
         <%= link_to 'share', new_like_path, class:"botoes-azuis"%>

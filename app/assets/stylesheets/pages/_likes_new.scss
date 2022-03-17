@@ -21,6 +21,25 @@
   height: 87.3vh;
   width: 100%;
   display: flex;
+  position: relative;
+}
+
+.swap-it {
+  font-family: "Bangers", cursive;
+  position: absolute;
+  text-align: center;
+  left: 27.5vw;
+  top: 20vh;
+  font-size: 15vw;
+  color: #ffd32d;
+  z-index: 5000;
+  -webkit-text-stroke-color: #5463ff;
+  -webkit-text-stroke-width: 7px;
+  text-shadow: 20px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+.swap-it-none {
+  display: none;
 }
 
 .container-my-stuff {
