@@ -22,7 +22,4 @@ export default class extends Controller {
     this.likeformTarget.submit();
   }
 
-  reloadPage(event) {
-    document.location.reload(true);
-  }
 }
