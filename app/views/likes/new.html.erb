@@ -8,10 +8,10 @@
   <% end %>
 
   <div class="container-my-stuff" data-controller="morfar">
-    <%= simple_form_for @like, html: { data: { like_button_target: 'likeform', morfar_target:"buttons"}} do |f| %>
+    <%= simple_form_for @like, html: { data: { like_button_target: 'likeform'}} do |f| %>
 
       <%= f.collection_radio_buttons(:stuff, @my_stuffs, :id, :name, options = {checked: @selected_stuff_id}, html_options={ }) do |n|
-      n.label(class:"bola", data: {action:"click->morfar#active"}) {cl_image_tag(Stuff.find(n.value).photos.first.key) + n.radio_button}
+      n.label(class:"bola", data: {morfar_target:"button", action:"click->morfar#active"}) {cl_image_tag(Stuff.find(n.value).photos.first.key) + n.radio_button}
       end %>
 
       <%= f.input :trading_stuff, as: :hidden, input_html: { value: @swap_stuff.id } %>

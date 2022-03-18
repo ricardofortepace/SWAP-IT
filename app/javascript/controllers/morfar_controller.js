@@ -1,17 +1,17 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ["buttons"];
+  static targets = ["button"];
 
   connect() {
-    console.log(this.buttonsTargets.firstElementChild);
+    this.buttonTarget.classList.add("quadrado");
   }
 
   active(event) {
-    this.buttonsTargets.forEach((button) => {
-      console.log(button);
+    this.buttonTargets.forEach((button) => {
+      button.classList.remove("quadrado");
     });
 
-    event.currentTarget.classList.toggle("quadrado");
+    event.currentTarget.classList.add("quadrado");
   }
 }
