@@ -25,6 +25,7 @@ class LikesController < ApplicationController
     #  @swap_stuff = Stuff.where.not(user: current_user).sample
 
     @like = Like.new
+
     @selected_stuff_id = params[:stuff].present? ? params[:stuff] : @my_stuffs.first.id
   end
 
