@@ -14,7 +14,7 @@ class LikesController < ApplicationController
       return
     end
 
-    @swap_stuffs = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).includes(:chatrooms).where(active: true, chatrooms: { id: nil })
+    @swap_stuffs = Stuff.where.not(user: current_user).includes(:chatrooms).where(active: true, chatrooms: { id: nil })
     unless @swap_stuffs&.present?
       redirect_to root_path, notice: "Sorry, but we dont have stuffs in your range."
       return
@@ -36,7 +36,7 @@ class LikesController < ApplicationController
     if Like.find_by(stuff: stuff, trading_stuff: trading_stuff)
       like = Like.find_by(stuff: stuff, trading_stuff: trading_stuff)
       like.status = params[:like][:status]
-      
+
     else
       like = Like.new(like_params)
       like.stuff = stuff
