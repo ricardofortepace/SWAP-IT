@@ -11,7 +11,7 @@ export default class extends Controller {
       percent1++;
       cnt1.innerHTML = percent1;
       water1.style.transform = "translate(0" + "," + (100 - percent1) + "%)";
-      if (percent1 == 29) {
+      if (percent1 == 71) {
         clearInterval(interval1);
       }
     }, 60);
@@ -25,7 +25,7 @@ export default class extends Controller {
       percent2++;
       cnt2.innerHTML = percent2;
       water2.style.transform = "translate(0" + "," + (100 - percent2) + "%)";
-      if (percent2 == 48) {
+      if (percent2 == 47) {
         clearInterval(interval2);
       }
     }, 60);
@@ -39,7 +39,7 @@ export default class extends Controller {
       percent3++;
       cnt3.innerHTML = percent3;
       water3.style.transform = "translate(0" + "," + (100 - percent3) + "%)";
-      if (percent3 == 39) {
+      if (percent3 == 3) {
         clearInterval(interval3);
       }
     }, 60);
