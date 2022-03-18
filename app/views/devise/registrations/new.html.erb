@@ -47,7 +47,7 @@
       <%= f.button :submit, "sign up", class: "button-04"%>
       <% end %>
 
-      <%= link_to "do you mean to sign in?", new_session_path(resource_name), class: "button-detail"%>
+      <%= link_to "do you mean to sign in?", new_session_path(resource_name), data: { turbolinks: false }, class: "button-detail"%>
 
     </div>
 
