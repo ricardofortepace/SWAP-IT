@@ -3,8 +3,9 @@ class LikesController < ApplicationController
     # ADICIONAR uma variavel para aplicar o range nos stuffs pertencentes somente aos usuarios proximos
     # @user_near = User.near(params[:address], params[:range]) if params[:address].present?
 
-    if current_user.stuffs.empty?
-    redirect_to new_stuff_path, notice: "You still need to add some stuff to swap."
+    @my_stuffs = current_user.stuffs.where(active: true)
+    unless @my_stuffs&.present?
+      redirect_to new_stuff_path, notice: "You still need to add some stuff to swap."
       return
     end
 
@@ -13,27 +14,33 @@ class LikesController < ApplicationController
       return
     end
 
-    if Stuff.near(current_user.address, current_user.range).where.not(user: current_user).empty?
+    @swap_stuffs = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).includes(:chatrooms).where(active: true, chatrooms: { id: nil })
+    unless @swap_stuffs&.present?
       redirect_to root_path, notice: "Sorry, but we dont have stuffs in your range."
       return
     end
 
-    @swap_stuff = Stuff.near(current_user.address, current_user.range).where.not(user: current_user).where.not(active: false).sample
+    @swap_stuff = @swap_stuffs.sample
 
-    # @swap_stuff = Stuff.where.not(user: current_user).sample
+    #  @swap_stuff = Stuff.where.not(user: current_user).sample
 
-    @my_stuffs = current_user.stuffs.where.not(active: false)
     @like = Like.new
     @selected_stuff_id = params[:stuff].present? ? params[:stuff] : @my_stuffs.first.id
   end
 
   def create
     # raise
-    like = Like.new(like_params)
     stuff = Stuff.find(params[:like][:stuff])
     trading_stuff = Stuff.find(params[:like][:trading_stuff])
-    like.stuff = stuff
-    like.trading_stuff = trading_stuff
+    if Like.find_by(stuff: stuff, trading_stuff: trading_stuff)
+      like = Like.find_by(stuff: stuff, trading_stuff: trading_stuff)
+      like.status = params[:like][:status]
+    else
+      like = Like.new(like_params)
+      like.stuff = stuff
+      like.trading_stuff = trading_stuff
+    end
+
     like.save!
 
     redirect_to new_like_path(chatroom_id: like.chatroom)
