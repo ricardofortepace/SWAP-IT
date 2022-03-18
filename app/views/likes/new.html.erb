@@ -3,7 +3,7 @@
     <div class="swap-it " data-controller="swap-it">SWAP IT?</div>
     <div>
       <%= link_to "let's talk!", chatroom_path(params[:chatroom_id]), class: 'botao-iniciar-conversa' %>
-      <%= link_to "keep on it", new_like_path, class: 'botao-continuar-swap', data: { action: "click->like-button#reloadPage" } %>
+      <%= link_to "keep on it", new_like_path, class: 'botao-continuar-swap' %>
     </div>
   <% end %>
 
