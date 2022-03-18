@@ -1,18 +1,19 @@
-<h2>Forgot your password?</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+<div class="container-formularios-simples">
+  <div class="form-swapit">
+    <h2 class="title">forgot your password?</h2>
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email, :label=>"email",
+                      placeholder: "your email here",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "send me reset password instructions", class:"button-04" %>
+        </div>
+      <% end %>
+      <%= link_to "do you mean to sign in?", new_session_path(resource_name), data: { turbolinks: false }, class: "button-detail"%><br>
+      <%= link_to "do you mean to sign up?", new_registration_path(resource_name), data: { turbolinks: false },  class: "button-detail"%>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
