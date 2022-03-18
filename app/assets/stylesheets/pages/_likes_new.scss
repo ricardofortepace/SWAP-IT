@@ -88,7 +88,13 @@
   gap: 30px;
 }
 
-#bola > img {
+.bola {
+  margin-top: 5px;
+  margin-bottom: 33px;
+  margin-left: 60px;
+}
+
+.bola > img {
   width: 225px;
   height: 225px;
   object-fit: cover;
@@ -101,37 +107,20 @@
   }
 }
 
+.quadrado {
+  width: 250x;
+  height: 240px;
+  border: 7px solid #5463ff;
+  border-radius: 5px;
+  z-index: 3000;
+}
+
 form abbr[title] {
   display: none;
 }
 
 input[type="radio"] {
   display: none;
-}
-
-.quadrado {
-  input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  input[type="radio"]:checked + img {
-    background-image: linear-gradient(
-      0deg,
-      rgba(255, 0, 149, 0.25),
-      rgba(255, 0, 149, 0)
-    );
-  }
-}
-
-#bola {
-  margin-top: 5px;
-  margin-bottom: 33px;
-  margin-left: 60px;
-  input.active {
-    border: 300px solid red;
-  }
 }
 
 .container-likes {

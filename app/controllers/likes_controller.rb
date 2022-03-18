@@ -24,6 +24,7 @@ class LikesController < ApplicationController
 
     @my_stuffs = current_user.stuffs.where.not(active: false)
     @like = Like.new
+
     @selected_stuff_id = params[:stuff].present? ? params[:stuff] : @my_stuffs.first.id
   end
 
