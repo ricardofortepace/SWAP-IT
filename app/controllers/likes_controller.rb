@@ -36,7 +36,7 @@ class LikesController < ApplicationController
     if Like.find_by(stuff: stuff, trading_stuff: trading_stuff)
       like = Like.find_by(stuff: stuff, trading_stuff: trading_stuff)
       like.status = params[:like][:status]
-      flash[:alert] = "New income message!!!"
+      
     else
       like = Like.new(like_params)
       like.stuff = stuff
