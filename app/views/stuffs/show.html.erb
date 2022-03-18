@@ -13,11 +13,11 @@
       </div>
       <div>
         <p class="their-title">what is it?</p>
-        <p class="their-description"><%=@stuff.name%></p>
+        <p class="their-description"><%=@stuff.name.capitalize%></p>
       </div>
       <div>
         <p class="their-title">details</p>
-        <p class="their-description"><%=@stuff.description%></p>
+        <p class="their-description"><%=@stuff.description.capitalize%></p>
       </div>
       <div class="botoes">
         <%= link_to 'share', "https://trex-runner.com/", target: "_blank", class:"botoes-azuis"%>
