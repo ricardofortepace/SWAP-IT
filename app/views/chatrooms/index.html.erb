@@ -1,6 +1,20 @@
-
-  <div class="container p-5">
+<div class="container-index-chats">
     <% @chatrooms.each do |chatroom| %>
-    <div><%= link_to "go to chat:#{chatroom.stuff.name} X #{chatroom.trading_stuff.name}", chatroom_path(chatroom), class:"m-5" %></div>
-    <% end %>
-  </div>
+  <div class="o-match">
+    <div class="what-mine">
+      <h2 class="mine"> mine</h2>
+    <%=link_to chatroom_path(chatroom) do %>
+      <%= cl_image_tag(chatroom.stuff.photos.first.key, :width=>150, :height=>150, :gravity=>"face",  :crop=>"thumb", class:"avatar-chats-mine" )%>
+      <%end%>
+    </div>
+    <div class="what-their">
+      <h2 class="theirs">theirs</h2>
+      <%=link_to chatroom_path(chatroom) do %>
+      <%= cl_image_tag(chatroom.trading_stuff.photos.first.key, :width=>150, :height=>150, :gravity=>"face",  :crop=>"thumb", class:"avatar-chats-their" )%>
+      <%end%>
+    </div>
+</div>
+
+  <% end %>
+
+</div>
