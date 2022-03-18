@@ -20,10 +20,17 @@
         <p class="their-description"><%=@stuff.description.capitalize%></p>
       </div>
       <div class="botoes">
-        <%= link_to 'share', "https://trex-runner.com/", target: "_blank", class:"botoes-azuis"%>
         <%= link_to 'edit', edit_stuff_path, class:"botoes-verdes"%>
-        <%= link_to 'delete', stuff_path(@stuff), method: 'DELETE', class:"botoes-marrons", data: { confirm: "are you sure?" } %>
-        <%= link_to 'see all my stuff', stuffs_path, class:"botoes-all_my_stuff"%>
+
+        <%if @stuff.active%>
+          <%= link_to "disable this stuff", stuff_path(@stuff, stuff: { active: false }), class: "botoes-marrons", method: :patch %>
+        <%else%>
+          <%= link_to "enable this stuff", stuff_path(@stuff, stuff: { active: true }), class: "botoes-marrons", method: :patch %>
+        <%end%>
+
+
+        <%= link_to 'see active stuff', stuffs_path, class:"botoes-all_my_stuff"%>
+        <%= link_to 'share', "https://trex-runner.com/", target: "_blank", class:"botoes-azuis"%>
       </div>
     </div>
 

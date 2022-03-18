@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def about_us
   end
 
+  def file
+    @stuffs = current_user.stuffs.all.where(active: false)
+  end
+
 end
