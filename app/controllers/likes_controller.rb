@@ -29,11 +29,17 @@ class LikesController < ApplicationController
 
   def create
     # raise
-    like = Like.new(like_params)
     stuff = Stuff.find(params[:like][:stuff])
     trading_stuff = Stuff.find(params[:like][:trading_stuff])
-    like.stuff = stuff
-    like.trading_stuff = trading_stuff
+    if Like.find_by(stuff: stuff, trading_stuff: trading_stuff)
+      like = Like.find_by(stuff: stuff, trading_stuff: trading_stuff)
+      like.status = params[:like][:status]
+    else
+      like = Like.new(like_params)
+      like.stuff = stuff
+      like.trading_stuff = trading_stuff
+    end
+
     like.save!
 
     redirect_to new_like_path(chatroom_id: like.chatroom)
