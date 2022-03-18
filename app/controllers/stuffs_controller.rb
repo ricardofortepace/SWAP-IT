@@ -43,7 +43,7 @@ class StuffsController < ApplicationController
   end
 
   def index
-    @stuffs = current_user.stuffs.all
+    @stuffs = current_user.stuffs.all.where(active: true)
   end
 
   private

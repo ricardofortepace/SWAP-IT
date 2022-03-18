@@ -25,10 +25,12 @@
               <%= image_tag "https://www.leaguegaming.com/tpl/homepage/img/lg/empty_profile.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <%end%>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "go home", root_path, class: "dropdown-item" %>
               <%= link_to "go swap", new_like_path, class: "dropdown-item" %>
-              <%= link_to "all chats", chatrooms_path, class: "dropdown-item" %>
-              <%= link_to "my stuff", stuffs_path, class: "dropdown-item"%>
               <%= link_to "add stuff", new_stuff_path, class: "dropdown-item" %>
+              <%= link_to "all chats", chatrooms_path, class: "dropdown-item" %>
+              <%= link_to "active stuff", stuffs_path, class: "dropdown-item"%>
+              <%= link_to "file of stuff", file_path, class: "dropdown-item"%>
               <%= link_to "edit user", edit_user_registration_path, data: { turbolinks: false }, class: "dropdown-item" %>
               <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
 

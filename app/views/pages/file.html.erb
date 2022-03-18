@@ -1,0 +1,14 @@
+  <div class="container-stuffs">
+    <% @stuffs.each do |stuff| %>
+      <%= link_to stuff, class:"no-deco" do %>
+          <div class="imagem text-decoration-none">
+            <%= cl_image_tag(stuff.photos.first.key, height: 200, width: 200, crop: :fill)%>
+            <p class="detail-info text-capitalize"><%=stuff.name%></p>
+        </div>
+      <%end%>
+    <% end %>
+  </div>
+  <div class="cont-bot">
+    <%= link_to 'add some stuff', new_stuff_path, class:"botoes-azuis"%>
+    <%= link_to 'go swap', new_like_path, class:"botoes-verdes"%>
+  </div>
