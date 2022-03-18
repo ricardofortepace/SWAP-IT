@@ -21,4 +21,8 @@ export default class extends Controller {
     dislike.checked = true;
     this.likeformTarget.submit();
   }
+
+  reloadPage(event) {
+    document.location.reload(true);
+  }
 }
