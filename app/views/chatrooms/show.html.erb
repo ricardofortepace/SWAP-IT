@@ -3,11 +3,11 @@
 
   <div class="o-match-show">
     <div class="what-mine-show">
-      <h2 class="mine-show"> mine</h2>
+      <%# <h2 class="mine-show"> mine</h2> %>
       <%= cl_image_tag(@chatroom.stuff.photos.first.key, :width=>75, :height=>75, :gravity=>"face",  :crop=>"thumb", class:"avatar-chats-mine-show" )%>
     </div>
     <div class="what-their-show">
-      <h2 class="theirs-show">theirs</h2>
+      <h2 class="theirs-show"><%=@chatroom.created_at.to_date.strftime("%d/%m/%Y")%></h2>
       <%= cl_image_tag(@chatroom.trading_stuff.photos.first.key, :width=>75, :height=>75, :gravity=>"face",  :crop=>"thumb", class:"avatar-chats-their-show" )%>
     </div>
   </div>
