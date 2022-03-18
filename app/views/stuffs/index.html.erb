@@ -3,7 +3,7 @@
       <%= link_to stuff, class:"no-deco" do %>
           <div class="imagem text-decoration-none">
             <%= cl_image_tag(stuff.photos.first.key, height: 200, width: 200, crop: :fill)%>
-            <p class="detail-info"><%=stuff.name%></p>
+            <p class="detail-info text-capitalize"><%=stuff.name%></p>
         </div>
       <%end%>
     <% end %>
