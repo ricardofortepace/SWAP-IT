@@ -30,13 +30,13 @@
 
 .theirs {
   position: absolute;
-  top: 155px;
-  left: 0px;
+  top: 160px;
+  left: 18px;
   font-weight: 700;
   letter-spacing: 0.2rem;
-  color: #5463ff;
+  color: #084594;
   font-family: "Sen", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   z-index: 20;
   opacity: 1;
@@ -53,34 +53,35 @@
   width: 150px;
   border-radius: 2px;
   box-shadow: -2.5px 2.5px 2.5px rgba(0, 0, 0, 0.25);
-  // border: 2px solid #5463ff;
+  border: 2px solid #084594;
   position: absolute;
   left: -20px;
 }
 .chat-icon {
   position: absolute;
-  width: 40px;
+  width: 50px;
   // background-image: url("../../../images/chat-icon.png");
   // background-position: center;
   // background-repeat: no-repeat;
   // background-size: cover;
-  top: -15px;
+  top: -20px;
   right: -150px;
   z-index: 50;
   opacity: 1;
   cursor: pointer;
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
 .avatar-chats-mine {
   width: 150px;
-  border-radius: 75px;
+  border-radius: 2px;
   box-shadow: -2.5px 2.5px 2.5px rgba(0, 0, 0, 0.25);
   border: 2px solid rgba(156, 102, 68, 0.9);
   position: absolute;
   left: 20px;
+  top: 35px;
   &:hover {
     // transform: scale(1.02);
   }
