@@ -14,7 +14,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li id=hello>
-            <p class="hello-user"><%= link_to "Hello " + current_user.name.titleize + ",", edit_user_registration_path, id:"hello-user" %></p>
+            <p class="hello-user"><%= link_to "Hello " + current_user.name.titleize, edit_user_registration_path, id:"hello-user" %></p>
           </li>
           <li class="nav-item dropdown">
 

@@ -12,7 +12,7 @@
 
         <%= f.input :password,:label => "password",
                     required: false,
-                    placeholder: 'min of 6 characters',
+                    placeholder: 'min. of 6 characters',
                     input_html: { autocomplete: "current-password" } %>
         <%= f.input :remember_me, :label => "remeber me", class: "button-detail", as: :boolean if devise_mapping.rememberable? %>
         <%= link_to "forgot password?", new_password_path(resource_name), class: "button-detail" %><br/><br/>
