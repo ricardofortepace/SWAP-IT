@@ -1,5 +1,6 @@
 <div class="container-main" data-controller="like-button">
   <%if params[:chatroom_id]%>
+    <div class="fundo"></div>
     <div class="swap-it " data-controller="swap-it">SWAP IT?</div>
     <div>
       <%= link_to "let's talk!", chatroom_path(params[:chatroom_id]), class: 'botao-iniciar-conversa' %>
