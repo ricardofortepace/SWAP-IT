@@ -53,7 +53,7 @@
 }
 
 .container-main {
-  height: 87.3vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   position: relative;
@@ -80,7 +80,7 @@
 
 .container-my-stuff {
   width: 30%;
-  height: 87.3vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow-y: scroll;
@@ -124,7 +124,7 @@ input[type="radio"] {
 }
 
 .container-likes {
-  height: 87.3vh;
+  height: 90vh;
   width: 40%;
   position: relative;
 }
@@ -136,7 +136,7 @@ input[type="radio"] {
 }
 
 .altura-cont {
-  height: 87.3vh;
+  height: 90vh;
   object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -173,7 +173,7 @@ input[type="radio"] {
 }
 
 .container-description {
-  height: 87.3vh;
+  height: 90vh;
   width: 30%;
   display: flex;
   flex-direction: column;
